@@ -36,6 +36,7 @@ public class AddExerciseController implements Initializable {
 	public void initialize(URL location, ResourceBundle resources) {
 		assertAll();
 		cancelButtonActionPerformed();
+		submitButtonActionPerformed();
 	}
 
 	/**
@@ -61,6 +62,13 @@ public class AddExerciseController implements Initializable {
 			Main.gotoNewScene((Stage) cancelAEButton.getScene().getWindow(),
 					LoginController.FILE_NAME, LoginController.WINDOW_TITLE)
 		);
+	}
+
+	private void submitButtonActionPerformed(){
+		submitAEButton.setOnAction(event ->{
+			String exercise = addExerciseTA.getText();
+			System.out.println(exercise);
+		});
 	}
 
 }

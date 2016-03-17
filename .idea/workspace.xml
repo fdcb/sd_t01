@@ -1,7 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="" />
+    <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/sample/TesteServer.java" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/T01SD/sample/AddExerciseController.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/T01SD/sample/User.class" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/T01SD/sample/LoginController.class" afterPath="$PROJECT_DIR$/out/production/T01SD/sample/LoginController.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/sample/AddExerciseController.java" afterPath="$PROJECT_DIR$/src/sample/AddExerciseController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/sample/Main.java" afterPath="$PROJECT_DIR$/src/sample/Main.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/sample/User.java" afterPath="$PROJECT_DIR$/src/sample/User.java" />
+    </list>
     <ignored path="JavaFxApplication.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path="$PROJECT_DIR$/out/" />
@@ -59,95 +68,122 @@
     <favorites_list name="JavaFxApplication" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Main.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/sample/Main.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="3" column="27" selection-start-line="3" selection-start-column="27" selection-end-line="3" selection-end-column="27" />
-              <folding>
-                <element signature="method#start#0;class#Main#0" expanded="false" />
-                <element signature="docComment;method#gotoNewScene#0;class#Main#0" expanded="false" />
-                <element signature="method#gotoNewScene#0;class#Main#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="RegisterController.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/sample/RegisterController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="76" column="10" selection-start-line="72" selection-start-column="8" selection-end-line="76" selection-end-column="10" />
-              <folding>
-                <element signature="docComment;class#RegisterController#0" expanded="false" />
-                <element signature="docComment;field#WINDOW_TITLE#0;class#RegisterController#0" expanded="false" />
-                <element signature="docComment;field#FILE_NAME#0;class#RegisterController#0" expanded="false" />
-                <element signature="method#initialize#0;class#RegisterController#0" expanded="false" />
-                <element signature="docComment;method#assertAll#0;class#RegisterController#0" expanded="false" />
-                <element signature="method#assertAll#0;class#RegisterController#0" expanded="false" />
-                <element signature="docComment;method#confirmButtonActionPerformed#0;class#RegisterController#0" expanded="false" />
-                <element signature="method#confirmButtonActionPerformed#0;class#RegisterController#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="AddExerciseController.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/sample/AddExerciseController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="docComment;class#AddExerciseController#0" expanded="false" />
-                <element signature="docComment;field#WINDOW_TITLE#0;class#AddExerciseController#0" expanded="false" />
-                <element signature="docComment;field#FILE_NAME#0;class#AddExerciseController#0" expanded="false" />
-                <element signature="docComment;method#assertAll#0;class#AddExerciseController#0" expanded="false" />
-                <element signature="method#assertAll#0;class#AddExerciseController#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="LoginController.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/sample/LoginController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.20382166">
-              <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
-              <folding>
-                <element signature="docComment;class#LoginController#0" expanded="false" />
-                <element signature="docComment;field#WINDOW_TITLE#0;class#LoginController#0" expanded="false" />
-                <element signature="docComment;field#FILE_NAME#0;class#LoginController#0" expanded="false" />
-                <element signature="method#initialize#0;class#LoginController#0" expanded="false" />
-                <element signature="docComment;method#assertAll#0;class#LoginController#0" expanded="false" />
-                <element signature="method#assertAll#0;class#LoginController#0" expanded="false" />
-                <element signature="docComment;method#setGuestUserLabelToClickable#0;class#LoginController#0" expanded="false" />
-                <element signature="method#setGuestUserLabelToClickable#0;class#LoginController#0" expanded="false" />
-                <element signature="docComment;method#setRegisterLabelToClickable#0;class#LoginController#0" expanded="false" />
-                <element signature="method#setRegisterLabelToClickable#0;class#LoginController#0" expanded="false" />
-                <element signature="docComment;method#cancelButtonActionPerformed#0;class#LoginController#0" expanded="false" />
-                <element signature="method#cancelButtonActionPerformed#0;class#LoginController#0" expanded="false" />
-                <element signature="docComment;method#confirmButtonActionPerformed#0;class#LoginController#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Login.fxml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/sample/Login.fxml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="37" column="18" selection-start-line="37" selection-start-column="18" selection-end-line="37" selection-end-column="18" />
-              <folding />
-            </state>
-          </provider>
-          <provider editor-type-id="JavaFX-Scene-Builder">
-            <state />
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <splitter split-orientation="horizontal" split-proportion="0.46533796">
+      <split-first>
+        <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+          <file leaf-file-name="Main.java" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/src/sample/Main.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state vertical-scroll-proportion="0.7407407">
+                  <caret line="40" column="26" selection-start-line="40" selection-start-column="26" selection-end-line="40" selection-end-column="26" />
+                  <folding>
+                    <element signature="imports" expanded="true" />
+                    <element signature="method#start#0;class#Main#0" expanded="false" />
+                    <element signature="docComment;method#gotoNewScene#0;class#Main#0" expanded="false" />
+                    <element signature="method#gotoNewScene#0;class#Main#0" expanded="false" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="RegisterController.java" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/sample/RegisterController.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state vertical-scroll-proportion="0.0">
+                  <caret line="77" column="5" selection-start-line="77" selection-start-column="5" selection-end-line="77" selection-end-column="5" />
+                  <folding>
+                    <element signature="docComment;class#RegisterController#0" expanded="false" />
+                    <element signature="docComment;field#WINDOW_TITLE#0;class#RegisterController#0" expanded="false" />
+                    <element signature="docComment;field#FILE_NAME#0;class#RegisterController#0" expanded="false" />
+                    <element signature="method#initialize#0;class#RegisterController#0" expanded="false" />
+                    <element signature="docComment;method#assertAll#0;class#RegisterController#0" expanded="false" />
+                    <element signature="method#assertAll#0;class#RegisterController#0" expanded="false" />
+                    <element signature="docComment;method#confirmButtonActionPerformed#0;class#RegisterController#0" expanded="false" />
+                    <element signature="method#confirmButtonActionPerformed#0;class#RegisterController#0" expanded="false" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="AddExerciseController.java" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/sample/AddExerciseController.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state vertical-scroll-proportion="0.0">
+                  <caret line="70" column="11" selection-start-line="70" selection-start-column="11" selection-end-line="70" selection-end-column="11" />
+                  <folding>
+                    <element signature="imports" expanded="true" />
+                    <element signature="docComment;class#AddExerciseController#0" expanded="false" />
+                    <element signature="docComment;field#WINDOW_TITLE#0;class#AddExerciseController#0" expanded="false" />
+                    <element signature="docComment;field#FILE_NAME#0;class#AddExerciseController#0" expanded="false" />
+                    <element signature="docComment;method#assertAll#0;class#AddExerciseController#0" expanded="false" />
+                    <element signature="method#assertAll#0;class#AddExerciseController#0" expanded="false" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="Exercise.java" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/sample/Exercise.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state vertical-scroll-proportion="0.0">
+                  <caret line="35" column="56" selection-start-line="35" selection-start-column="56" selection-end-line="35" selection-end-column="56" />
+                  <folding>
+                    <element signature="docComment;class#Exercise#0" expanded="false" />
+                    <element signature="docComment;field#STATE_CLOSED#0;class#Exercise#0" expanded="false" />
+                    <element signature="docComment;field#STATE_OPEN#0;class#Exercise#0" expanded="false" />
+                    <element signature="docComment;method#Exercise#0;class#Exercise#0" expanded="false" />
+                    <element signature="docComment;method#getDescription#0;class#Exercise#0" expanded="false" />
+                    <element signature="docComment;method#getState#0;class#Exercise#0" expanded="false" />
+                    <element signature="docComment;method#getUserCod#0;class#Exercise#0" expanded="false" />
+                    <element signature="docComment;method#getUcCod#0;class#Exercise#0" expanded="false" />
+                    <element signature="docComment;method#getCod#0;class#Exercise#0" expanded="false" />
+                    <element signature="docComment;method#setStateClosed#0;class#Exercise#0" expanded="false" />
+                    <element signature="docComment;method#getSolutionCount#0;class#Exercise#0" expanded="false" />
+                    <element signature="docComment;method#addSolutionCount#0;class#Exercise#0" expanded="false" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="Teste.java" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/sample/Teste.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state vertical-scroll-proportion="0.0">
+                  <caret line="7" column="56" selection-start-line="7" selection-start-column="24" selection-end-line="7" selection-end-column="56" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+        </leaf>
+      </split-first>
+      <split-second>
+        <leaf>
+          <file leaf-file-name="User.java" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/sample/User.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state vertical-scroll-proportion="0.0">
+                  <caret line="75" column="55" selection-start-line="75" selection-start-column="55" selection-end-line="75" selection-end-column="55" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="TesteServer.java" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/src/sample/TesteServer.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state vertical-scroll-proportion="0.6296296">
+                  <caret line="17" column="12" selection-start-line="17" selection-start-column="12" selection-end-line="17" selection-end-column="32" />
+                  <folding>
+                    <element signature="imports" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+        </leaf>
+      </split-second>
+    </splitter>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -162,6 +198,9 @@
       <setting name="OPEN_NEW_TAB" value="false" />
     </FindUsagesManager>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="GradleLocalSettings">
     <option name="externalProjectsViewState">
       <projects_view />
@@ -170,7 +209,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/sample/User.java" />
         <option value="$PROJECT_DIR$/src/sample/Solution.java" />
         <option value="$PROJECT_DIR$/src/sample/UC.java" />
         <option value="$PROJECT_DIR$/src/sample/Login.java" />
@@ -180,12 +218,15 @@
         <option value="$PROJECT_DIR$/src/fxmlRelated/Register.fxml" />
         <option value="$PROJECT_DIR$/src/fxmlRelated/RegisterController.java" />
         <option value="$PROJECT_DIR$/src/fxmlRelated/LoginController.java" />
-        <option value="$PROJECT_DIR$/src/sample/Main.java" />
         <option value="$PROJECT_DIR$/src/sample/AddExercise.fxml" />
         <option value="$PROJECT_DIR$/src/sample/Exercise.java" />
         <option value="$PROJECT_DIR$/src/sample/RegisterController.java" />
-        <option value="$PROJECT_DIR$/src/sample/AddExerciseController.java" />
         <option value="$PROJECT_DIR$/src/sample/LoginController.java" />
+        <option value="$PROJECT_DIR$/src/sample/AddExerciseController.java" />
+        <option value="$PROJECT_DIR$/src/sample/Teste.java" />
+        <option value="$PROJECT_DIR$/src/sample/User.java" />
+        <option value="$PROJECT_DIR$/src/sample/TesteServer.java" />
+        <option value="$PROJECT_DIR$/src/sample/Main.java" />
       </list>
     </option>
   </component>
@@ -198,12 +239,11 @@
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
   <component name="ProjectFrameBounds">
-    <option name="x" value="1" />
     <option name="y" value="1" />
-    <option name="width" value="1364" />
+    <option name="width" value="1365" />
     <option name="height" value="766" />
   </component>
-  <component name="ProjectLevelVcsManager" settingsEditedManually="false">
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <OptionsSetting value="true" id="Add" />
     <OptionsSetting value="true" id="Remove" />
     <OptionsSetting value="true" id="Checkout" />
@@ -212,7 +252,7 @@
     <OptionsSetting value="true" id="Edit" />
     <OptionsSetting value="true" id="Undo Check Out" />
     <OptionsSetting value="true" id="Get Latest Version" />
-    <ConfirmationsSetting value="0" id="Add" />
+    <ConfirmationsSetting value="2" id="Add" />
     <ConfirmationsSetting value="0" id="Remove" />
   </component>
   <component name="ProjectReloadState">
@@ -233,7 +273,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
+      <pane id="Scope" />
       <pane id="PackagesPane">
         <subPane>
           <PATH>
@@ -262,6 +302,7 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -300,7 +341,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -314,7 +354,7 @@
     <property name="GoToClass.includeLibraries" value="false" />
     <property name="dynamic.classpath" value="false" />
     <property name="MemberChooser.copyJavadoc" value="false" />
-    <property name="settings.editor.selected.configurable" value="preferences.sourceCode.Java" />
+    <property name="settings.editor.selected.configurable" value="configurable.group.build.tools" />
     <property name="settings.editor.splitter.proportion" value="0.2" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.0" />
@@ -596,22 +636,25 @@
     <option name="totallyTimeSpent" value="1302000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="1" y="1" width="1364" height="766" extended-state="1" />
-    <editor active="false" />
+    <frame x="0" y="1" width="1365" height="766" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3292683" sideWeight="0.5" order="14" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2987805" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20400594" sideWeight="0.6703755" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.14455152" sideWeight="0.6703755" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -619,15 +662,42 @@
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Profiler" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3292683" sideWeight="0.5" order="14" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2987805" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Problems" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32937685" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
+    <layout-to-restore>
+      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Profiler" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3292683" sideWeight="0.5" order="14" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2987805" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
+      <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20385471" sideWeight="0.6703755" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Problems" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32937685" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+    </layout-to-restore>
   </component>
   <component name="Vcs.Log.UiProperties">
     <option name="RECENTLY_FILTERED_USER_GROUPS">
@@ -656,6 +726,107 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="3" column="27" selection-start-line="3" selection-start-column="27" selection-end-line="3" selection-end-column="27" />
           <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#start#0;class#Main#0" expanded="false" />
+            <element signature="docComment;method#gotoNewScene#0;class#Main#0" expanded="false" />
+            <element signature="method#gotoNewScene#0;class#Main#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sample/RegisterController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="77" column="5" selection-start-line="77" selection-start-column="5" selection-end-line="77" selection-end-column="5" />
+          <folding>
+            <element signature="docComment;class#RegisterController#0" expanded="false" />
+            <element signature="docComment;field#WINDOW_TITLE#0;class#RegisterController#0" expanded="false" />
+            <element signature="docComment;field#FILE_NAME#0;class#RegisterController#0" expanded="false" />
+            <element signature="method#initialize#0;class#RegisterController#0" expanded="false" />
+            <element signature="docComment;method#assertAll#0;class#RegisterController#0" expanded="false" />
+            <element signature="method#assertAll#0;class#RegisterController#0" expanded="false" />
+            <element signature="docComment;method#confirmButtonActionPerformed#0;class#RegisterController#0" expanded="false" />
+            <element signature="method#confirmButtonActionPerformed#0;class#RegisterController#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sample/AddExerciseController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="docComment;class#AddExerciseController#0" expanded="false" />
+            <element signature="docComment;field#WINDOW_TITLE#0;class#AddExerciseController#0" expanded="false" />
+            <element signature="docComment;field#FILE_NAME#0;class#AddExerciseController#0" expanded="false" />
+            <element signature="docComment;method#assertAll#0;class#AddExerciseController#0" expanded="false" />
+            <element signature="method#assertAll#0;class#AddExerciseController#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sample/Exercise.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="35" column="56" selection-start-line="35" selection-start-column="56" selection-end-line="35" selection-end-column="56" />
+          <folding>
+            <element signature="docComment;class#Exercise#0" expanded="false" />
+            <element signature="docComment;field#STATE_CLOSED#0;class#Exercise#0" expanded="false" />
+            <element signature="docComment;field#STATE_OPEN#0;class#Exercise#0" expanded="false" />
+            <element signature="docComment;method#Exercise#0;class#Exercise#0" expanded="false" />
+            <element signature="docComment;method#getDescription#0;class#Exercise#0" expanded="false" />
+            <element signature="docComment;method#getState#0;class#Exercise#0" expanded="false" />
+            <element signature="docComment;method#getUserCod#0;class#Exercise#0" expanded="false" />
+            <element signature="docComment;method#getUcCod#0;class#Exercise#0" expanded="false" />
+            <element signature="docComment;method#getCod#0;class#Exercise#0" expanded="false" />
+            <element signature="docComment;method#setStateClosed#0;class#Exercise#0" expanded="false" />
+            <element signature="docComment;method#getSolutionCount#0;class#Exercise#0" expanded="false" />
+            <element signature="docComment;method#addSolutionCount#0;class#Exercise#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sample/LoginController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="95" column="7" selection-start-line="95" selection-start-column="7" selection-end-line="95" selection-end-column="7" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="docComment;class#LoginController#0" expanded="false" />
+            <element signature="docComment;field#WINDOW_TITLE#0;class#LoginController#0" expanded="false" />
+            <element signature="docComment;field#FILE_NAME#0;class#LoginController#0" expanded="false" />
+            <element signature="method#initialize#0;class#LoginController#0" expanded="false" />
+            <element signature="docComment;method#assertAll#0;class#LoginController#0" expanded="false" />
+            <element signature="method#assertAll#0;class#LoginController#0" expanded="false" />
+            <element signature="docComment;method#setGuestUserLabelToClickable#0;class#LoginController#0" expanded="false" />
+            <element signature="method#setGuestUserLabelToClickable#0;class#LoginController#0" expanded="false" />
+            <element signature="docComment;method#setRegisterLabelToClickable#0;class#LoginController#0" expanded="false" />
+            <element signature="method#setRegisterLabelToClickable#0;class#LoginController#0" expanded="false" />
+            <element signature="docComment;method#cancelButtonActionPerformed#0;class#LoginController#0" expanded="false" />
+            <element signature="method#cancelButtonActionPerformed#0;class#LoginController#0" expanded="false" />
+            <element signature="docComment;method#confirmButtonActionPerformed#0;class#LoginController#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sample/Login.fxml">
+      <provider editor-type-id="JavaFX-Scene-Builder">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="37" column="18" selection-start-line="37" selection-start-column="18" selection-end-line="37" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sample/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="3" column="27" selection-start-line="3" selection-start-column="27" selection-end-line="3" selection-end-column="27" />
+          <folding>
+            <element signature="imports" expanded="true" />
             <element signature="method#start#0;class#Main#0" expanded="false" />
             <element signature="docComment;method#gotoNewScene#0;class#Main#0" expanded="false" />
             <element signature="method#gotoNewScene#0;class#Main#0" expanded="false" />
@@ -700,6 +871,7 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
+            <element signature="imports" expanded="true" />
             <element signature="docComment;class#LoginController#0" expanded="false" />
             <element signature="docComment;field#WINDOW_TITLE#0;class#LoginController#0" expanded="false" />
             <element signature="docComment;field#FILE_NAME#0;class#LoginController#0" expanded="false" />
@@ -718,14 +890,93 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/sample/Login.fxml">
+      <provider editor-type-id="JavaFX-Scene-Builder">
+        <state />
+      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="37" column="18" selection-start-line="37" selection-start-column="18" selection-end-line="37" selection-end-column="18" />
           <folding />
         </state>
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sample/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="3" column="27" selection-start-line="3" selection-start-column="27" selection-end-line="3" selection-end-column="27" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#start#0;class#Main#0" expanded="false" />
+            <element signature="docComment;method#gotoNewScene#0;class#Main#0" expanded="false" />
+            <element signature="method#gotoNewScene#0;class#Main#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sample/RegisterController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="76" column="10" selection-start-line="72" selection-start-column="8" selection-end-line="76" selection-end-column="10" />
+          <folding>
+            <element signature="docComment;class#RegisterController#0" expanded="false" />
+            <element signature="docComment;field#WINDOW_TITLE#0;class#RegisterController#0" expanded="false" />
+            <element signature="docComment;field#FILE_NAME#0;class#RegisterController#0" expanded="false" />
+            <element signature="method#initialize#0;class#RegisterController#0" expanded="false" />
+            <element signature="docComment;method#assertAll#0;class#RegisterController#0" expanded="false" />
+            <element signature="method#assertAll#0;class#RegisterController#0" expanded="false" />
+            <element signature="docComment;method#confirmButtonActionPerformed#0;class#RegisterController#0" expanded="false" />
+            <element signature="method#confirmButtonActionPerformed#0;class#RegisterController#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sample/AddExerciseController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="docComment;class#AddExerciseController#0" expanded="false" />
+            <element signature="docComment;field#WINDOW_TITLE#0;class#AddExerciseController#0" expanded="false" />
+            <element signature="docComment;field#FILE_NAME#0;class#AddExerciseController#0" expanded="false" />
+            <element signature="docComment;method#assertAll#0;class#AddExerciseController#0" expanded="false" />
+            <element signature="method#assertAll#0;class#AddExerciseController#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sample/LoginController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="docComment;class#LoginController#0" expanded="false" />
+            <element signature="docComment;field#WINDOW_TITLE#0;class#LoginController#0" expanded="false" />
+            <element signature="docComment;field#FILE_NAME#0;class#LoginController#0" expanded="false" />
+            <element signature="method#initialize#0;class#LoginController#0" expanded="false" />
+            <element signature="docComment;method#assertAll#0;class#LoginController#0" expanded="false" />
+            <element signature="method#assertAll#0;class#LoginController#0" expanded="false" />
+            <element signature="docComment;method#setGuestUserLabelToClickable#0;class#LoginController#0" expanded="false" />
+            <element signature="method#setGuestUserLabelToClickable#0;class#LoginController#0" expanded="false" />
+            <element signature="docComment;method#setRegisterLabelToClickable#0;class#LoginController#0" expanded="false" />
+            <element signature="method#setRegisterLabelToClickable#0;class#LoginController#0" expanded="false" />
+            <element signature="docComment;method#cancelButtonActionPerformed#0;class#LoginController#0" expanded="false" />
+            <element signature="method#cancelButtonActionPerformed#0;class#LoginController#0" expanded="false" />
+            <element signature="docComment;method#confirmButtonActionPerformed#0;class#LoginController#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sample/Login.fxml">
       <provider editor-type-id="JavaFX-Scene-Builder">
         <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="37" column="18" selection-start-line="37" selection-start-column="18" selection-end-line="37" selection-end-column="18" />
+          <folding />
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/sample/Main.java">
@@ -733,6 +984,7 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="3" column="27" selection-start-line="3" selection-start-column="27" selection-end-line="3" selection-end-column="27" />
           <folding>
+            <element signature="imports" expanded="true" />
             <element signature="method#start#0;class#Main#0" expanded="false" />
             <element signature="docComment;method#gotoNewScene#0;class#Main#0" expanded="false" />
             <element signature="method#gotoNewScene#0;class#Main#0" expanded="false" />
@@ -773,14 +1025,14 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/sample/Login.fxml">
+      <provider editor-type-id="JavaFX-Scene-Builder">
+        <state />
+      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
-      </provider>
-      <provider editor-type-id="JavaFX-Scene-Builder">
-        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/sample/Main.java">
@@ -788,6 +1040,7 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="3" column="27" selection-start-line="3" selection-start-column="27" selection-end-line="3" selection-end-column="27" />
           <folding>
+            <element signature="imports" expanded="true" />
             <element signature="method#start#0;class#Main#0" expanded="false" />
             <element signature="docComment;method#gotoNewScene#0;class#Main#0" expanded="false" />
             <element signature="method#gotoNewScene#0;class#Main#0" expanded="false" />
@@ -828,14 +1081,14 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/sample/Login.fxml">
+      <provider editor-type-id="JavaFX-Scene-Builder">
+        <state />
+      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
-      </provider>
-      <provider editor-type-id="JavaFX-Scene-Builder">
-        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/sample/Main.java">
@@ -843,6 +1096,7 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
+            <element signature="imports" expanded="true" />
             <element signature="method#start#0;class#Main#0" expanded="false" />
             <element signature="docComment;method#gotoNewScene#0;class#Main#0" expanded="false" />
             <element signature="method#gotoNewScene#0;class#Main#0" expanded="false" />
@@ -855,6 +1109,7 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
           <folding>
+            <element signature="imports" expanded="true" />
             <element signature="method#start#0;class#Main#0" expanded="false" />
             <element signature="docComment;method#gotoNewScene#0;class#Main#0" expanded="false" />
             <element signature="method#gotoNewScene#0;class#Main#0" expanded="false" />
@@ -904,14 +1159,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/sample/User.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="35" column="42" selection-start-line="35" selection-start-column="42" selection-end-line="35" selection-end-column="42" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://C:/Program Files/Java/jdk1.8.0_60/javafx-src.zip!/com/sun/javafx/application/LauncherImpl.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -927,14 +1174,14 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/sample/Register.fxml">
+      <provider editor-type-id="JavaFX-Scene-Builder">
+        <state />
+      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.8730159">
           <caret line="36" column="47" selection-start-line="36" selection-start-column="47" selection-end-line="36" selection-end-column="47" />
           <folding />
         </state>
-      </provider>
-      <provider editor-type-id="JavaFX-Scene-Builder">
-        <state />
       </provider>
     </entry>
     <entry file="jar://C:/Program Files/Java/jdk1.8.0_60/javafx-src.zip!/javafx/fxml/FXMLLoader.java">
@@ -944,33 +1191,87 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/sample/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="3" column="27" selection-start-line="3" selection-start-column="27" selection-end-line="3" selection-end-column="27" />
-          <folding>
-            <element signature="method#start#0;class#Main#0" expanded="false" />
-            <element signature="docComment;method#gotoNewScene#0;class#Main#0" expanded="false" />
-            <element signature="method#gotoNewScene#0;class#Main#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/sample/AddExercise.fxml">
+      <provider editor-type-id="JavaFX-Scene-Builder">
+        <state />
+      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.16053511">
           <caret line="6" column="0" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
           <folding />
         </state>
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sample/Login.fxml">
       <provider editor-type-id="JavaFX-Scene-Builder">
         <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="37" column="18" selection-start-line="37" selection-start-column="18" selection-end-line="37" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sample/LoginController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="95" column="7" selection-start-line="95" selection-start-column="7" selection-end-line="95" selection-end-column="7" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="docComment;class#LoginController#0" expanded="false" />
+            <element signature="docComment;field#WINDOW_TITLE#0;class#LoginController#0" expanded="false" />
+            <element signature="docComment;field#FILE_NAME#0;class#LoginController#0" expanded="false" />
+            <element signature="method#initialize#0;class#LoginController#0" expanded="false" />
+            <element signature="docComment;method#assertAll#0;class#LoginController#0" expanded="false" />
+            <element signature="method#assertAll#0;class#LoginController#0" expanded="false" />
+            <element signature="docComment;method#setGuestUserLabelToClickable#0;class#LoginController#0" expanded="false" />
+            <element signature="method#setGuestUserLabelToClickable#0;class#LoginController#0" expanded="false" />
+            <element signature="docComment;method#setRegisterLabelToClickable#0;class#LoginController#0" expanded="false" />
+            <element signature="method#setRegisterLabelToClickable#0;class#LoginController#0" expanded="false" />
+            <element signature="docComment;method#cancelButtonActionPerformed#0;class#LoginController#0" expanded="false" />
+            <element signature="method#cancelButtonActionPerformed#0;class#LoginController#0" expanded="false" />
+            <element signature="docComment;method#confirmButtonActionPerformed#0;class#LoginController#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sample/RegisterController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="77" column="5" selection-start-line="77" selection-start-column="5" selection-end-line="77" selection-end-column="5" />
+          <folding>
+            <element signature="docComment;class#RegisterController#0" expanded="false" />
+            <element signature="docComment;field#WINDOW_TITLE#0;class#RegisterController#0" expanded="false" />
+            <element signature="docComment;field#FILE_NAME#0;class#RegisterController#0" expanded="false" />
+            <element signature="method#initialize#0;class#RegisterController#0" expanded="false" />
+            <element signature="docComment;method#assertAll#0;class#RegisterController#0" expanded="false" />
+            <element signature="method#assertAll#0;class#RegisterController#0" expanded="false" />
+            <element signature="docComment;method#confirmButtonActionPerformed#0;class#RegisterController#0" expanded="false" />
+            <element signature="method#confirmButtonActionPerformed#0;class#RegisterController#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sample/AddExerciseController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="70" column="11" selection-start-line="70" selection-start-column="11" selection-end-line="70" selection-end-column="11" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="docComment;class#AddExerciseController#0" expanded="false" />
+            <element signature="docComment;field#WINDOW_TITLE#0;class#AddExerciseController#0" expanded="false" />
+            <element signature="docComment;field#FILE_NAME#0;class#AddExerciseController#0" expanded="false" />
+            <element signature="docComment;method#assertAll#0;class#AddExerciseController#0" expanded="false" />
+            <element signature="method#assertAll#0;class#AddExerciseController#0" expanded="false" />
+          </folding>
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/sample/Exercise.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.9325153">
-          <caret line="90" column="0" selection-start-line="90" selection-start-column="0" selection-end-line="90" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="35" column="56" selection-start-line="35" selection-start-column="56" selection-end-line="35" selection-end-column="56" />
           <folding>
             <element signature="docComment;class#Exercise#0" expanded="false" />
             <element signature="docComment;field#STATE_CLOSED#0;class#Exercise#0" expanded="false" />
@@ -988,67 +1289,41 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/sample/RegisterController.java">
+    <entry file="file://$PROJECT_DIR$/src/sample/User.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="76" column="10" selection-start-line="72" selection-start-column="8" selection-end-line="76" selection-end-column="10" />
-          <folding>
-            <element signature="docComment;class#RegisterController#0" expanded="false" />
-            <element signature="docComment;field#WINDOW_TITLE#0;class#RegisterController#0" expanded="false" />
-            <element signature="docComment;field#FILE_NAME#0;class#RegisterController#0" expanded="false" />
-            <element signature="method#initialize#0;class#RegisterController#0" expanded="false" />
-            <element signature="docComment;method#assertAll#0;class#RegisterController#0" expanded="false" />
-            <element signature="method#assertAll#0;class#RegisterController#0" expanded="false" />
-            <element signature="docComment;method#confirmButtonActionPerformed#0;class#RegisterController#0" expanded="false" />
-            <element signature="method#confirmButtonActionPerformed#0;class#RegisterController#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/sample/Login.fxml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="37" column="18" selection-start-line="37" selection-start-column="18" selection-end-line="37" selection-end-column="18" />
+          <caret line="75" column="55" selection-start-line="75" selection-start-column="55" selection-end-line="75" selection-end-column="55" />
           <folding />
         </state>
       </provider>
-      <provider editor-type-id="JavaFX-Scene-Builder">
-        <state />
-      </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/sample/AddExerciseController.java">
+    <entry file="file://$PROJECT_DIR$/src/sample/TesteServer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.6296296">
+          <caret line="17" column="12" selection-start-line="17" selection-start-column="12" selection-end-line="17" selection-end-column="32" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="docComment;class#AddExerciseController#0" expanded="false" />
-            <element signature="docComment;field#WINDOW_TITLE#0;class#AddExerciseController#0" expanded="false" />
-            <element signature="docComment;field#FILE_NAME#0;class#AddExerciseController#0" expanded="false" />
-            <element signature="docComment;method#assertAll#0;class#AddExerciseController#0" expanded="false" />
-            <element signature="method#assertAll#0;class#AddExerciseController#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/sample/LoginController.java">
+    <entry file="file://$PROJECT_DIR$/src/sample/Teste.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.20382166">
-          <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="7" column="56" selection-start-line="7" selection-start-column="24" selection-end-line="7" selection-end-column="56" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sample/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.7407407">
+          <caret line="40" column="26" selection-start-line="40" selection-start-column="26" selection-end-line="40" selection-end-column="26" />
           <folding>
-            <element signature="docComment;class#LoginController#0" expanded="false" />
-            <element signature="docComment;field#WINDOW_TITLE#0;class#LoginController#0" expanded="false" />
-            <element signature="docComment;field#FILE_NAME#0;class#LoginController#0" expanded="false" />
-            <element signature="method#initialize#0;class#LoginController#0" expanded="false" />
-            <element signature="docComment;method#assertAll#0;class#LoginController#0" expanded="false" />
-            <element signature="method#assertAll#0;class#LoginController#0" expanded="false" />
-            <element signature="docComment;method#setGuestUserLabelToClickable#0;class#LoginController#0" expanded="false" />
-            <element signature="method#setGuestUserLabelToClickable#0;class#LoginController#0" expanded="false" />
-            <element signature="docComment;method#setRegisterLabelToClickable#0;class#LoginController#0" expanded="false" />
-            <element signature="method#setRegisterLabelToClickable#0;class#LoginController#0" expanded="false" />
-            <element signature="docComment;method#cancelButtonActionPerformed#0;class#LoginController#0" expanded="false" />
-            <element signature="method#cancelButtonActionPerformed#0;class#LoginController#0" expanded="false" />
-            <element signature="docComment;method#confirmButtonActionPerformed#0;class#LoginController#0" expanded="false" />
+            <element signature="imports" expanded="true" />
+            <element signature="method#start#0;class#Main#0" expanded="false" />
+            <element signature="docComment;method#gotoNewScene#0;class#Main#0" expanded="false" />
+            <element signature="method#gotoNewScene#0;class#Main#0" expanded="false" />
           </folding>
         </state>
       </provider>
