@@ -7,7 +7,7 @@ package sample;
  * @author Filipa Brito
  * @author André Ramos
  */
-public class User {
+public class User extends java.rmi.server.UnicastRemoteObject implements Teste{
 	private String name, username, email;
 	private static int cod;
 
@@ -19,7 +19,8 @@ public class User {
 	 * @param email		User's email
 	 *
 	 */
-	public User(String username, String name, String email) {
+	public User(String username, String name, String email) throws java.rmi
+			.RemoteException{
 		this.username = username;
 		this.name = name;
 		this.email = email;
@@ -33,7 +34,7 @@ public class User {
 	 * @param name		Name of the user
 	 * @param username	Identifier used by the user to login
 	 */
-	public User(String name, String username) {
+	public User(String name, String username) throws java.rmi.RemoteException{
 		this.name = name;
 		this.username = username;
 		this.email = "Unknown";
@@ -45,7 +46,7 @@ public class User {
 	 *
 	 * @return Username of this user
 	 */
-	public String getUsername() {
+	public String getUsername() throws java.rmi.RemoteException {
 		return username;
 	}
 
@@ -54,7 +55,7 @@ public class User {
 	 *
 	 * @return Name of the user
 	 */
-	public String getName() {
+	public String getName() throws java.rmi.RemoteException {
 		return name;
 	}
 
@@ -63,7 +64,7 @@ public class User {
 	 *
 	 * @return Email of the user
 	 */
-	public String getEmail() {
+	public String getEmail() throws java.rmi.RemoteException {
 		return email;
 	}
 
@@ -72,7 +73,7 @@ public class User {
 	 *
 	 * @return Code of this user
 	 */
-	public static int getCod() {
+	public int getCod() throws java.rmi.RemoteException {
 		return cod;
 	}
 }
