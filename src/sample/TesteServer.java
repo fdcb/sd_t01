@@ -8,14 +8,32 @@ import java.rmi.*;
 public class TesteServer {
 
 	public TesteServer(){
+	//	System.setProperty("java.rmi.server.hostname","192.168.206.96");
+		System.setProperty("java.security.policy", "file:/C:/T01SD/java" +
+				".policy");
+
 		System.setSecurityManager(new RMISecurityManager());
 		try{
-			Teste a = new User("ana","aninha");
-			Naming.rebind("rmi://localhost:1099/TesteService",a);
+		//
+			java.rmi.registry.LocateRegistry.createRegistry(1099);
+			//Naming.rebind("rmi://localhost:1099/TesteService",a);
 		} catch (RemoteException e) {
 			e.printStackTrace();
-		} catch (MalformedURLException e) {
+		}
+
+	/*	try {
+			//Teste a = new Teste("Server");
+			//User a = new User("ana","aninha");
+		} catch (RemoteException e) {
 			e.printStackTrace();
 		}
+		/* catch (MalformedURLException e) {
+			e.printStackTrace();
+		}*/
+	}
+
+	public static void main(String[] args) {
+		//launch(args);
+		new TesteServer();
 	}
 }
