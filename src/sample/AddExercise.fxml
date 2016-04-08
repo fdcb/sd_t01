@@ -10,7 +10,7 @@
             prefWidth="600.0" text="UC name will be here"
             xmlns="http://javafx.com/javafx/8"
             xmlns:fx="http://javafx.com/fxml/1"
-            fx:controller="sample.AddExerciseController">
+            fx:controller="sample.AddSolutionController">
    <content>
       <Pane prefHeight="343.0" prefWidth="598.0">
          <children>
