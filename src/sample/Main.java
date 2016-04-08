@@ -38,8 +38,7 @@ public class Main extends Application {
 	}
 
     public static void main(String[] args) {
-        //launch(args);
-		//Teste a = (Teste) Naming.lookup()
+        launch(args);
     }
 
 }
