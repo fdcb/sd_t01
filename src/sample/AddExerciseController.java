@@ -63,7 +63,10 @@ public class AddExerciseController implements Initializable {
 					LoginController.FILE_NAME, LoginController.WINDOW_TITLE)
 		);
 	}
-
+	/**
+	 * Changes the {@link AddExerciseController#submitAEButton} so that it
+	 * adds a new exercise when clicked.
+	 */
 	private void submitButtonActionPerformed(){
 		submitAEButton.setOnAction(event ->{
 			String exercise = addExerciseTA.getText();

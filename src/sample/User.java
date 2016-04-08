@@ -7,7 +7,7 @@ package sample;
  * @author Filipa Brito
  * @author André Ramos
  */
-public class User extends java.rmi.server.UnicastRemoteObject implements Teste{
+public class User{
 	private String name, username, email;
 	private static int cod;
 
