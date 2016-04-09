@@ -92,6 +92,10 @@ public class SearchUcController implements Initializable{
         return button;
     }
 
+    /**
+     * Changes the {@link SearchUcController#ucNamesSUGridPane} in order to
+     * have the buttons for all the UC's with exercises in the platform.
+     */
     private void addButtonstoGridLayout(){
         String[] names = {"nome1", "nome2", "nome3", "nome4","nome5", "1nome1",
                 "1nome2", "1nome3", "1nome4","1ndddddddome5"};
