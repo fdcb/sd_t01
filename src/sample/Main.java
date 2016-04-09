@@ -11,8 +11,10 @@ public class Main extends Application {
 
     @Override
     public void start(Stage primaryStage){
-		gotoNewScene(primaryStage, LoginController.FILE_NAME,
-				LoginController.WINDOW_TITLE);
+		//gotoNewScene(primaryStage, LoginController.FILE_NAME,
+			//	LoginController.WINDOW_TITLE);
+	    gotoNewScene(primaryStage, SearchUcController.FILE_NAME,
+                SearchUcController.WINDOW_TITLE);
     }
 
 	/**
