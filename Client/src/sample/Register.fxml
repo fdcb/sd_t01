@@ -22,16 +22,17 @@
                 <Cursor fx:constant="HAND" />
             </cursor></Button>
         <TextField fx:id="regUsernameTF" layoutX="86.0" layoutY="39.0" />
-        <Label layoutX="20.0" layoutY="43.0" prefHeight="17.0"
-               prefWidth="61.0"  text="Username: " />
+        <Label layoutX="20.0" layoutY="43.0" prefHeight="17.0" prefWidth="61.0"
+               text="Username: " />
         <Label layoutX="20.0" layoutY="121.0" text="Password:" />
         <PasswordField fx:id="regPasswordF" layoutX="86.0" layoutY="117.0" />
       <Label layoutX="20.0" layoutY="82.0" prefHeight="17.0" prefWidth="61.0"
              text="Email:" />
       <TextField fx:id="emailTF" layoutX="86.0" layoutY="78.0" />
       <Label fx:id="warningUsername" layoutX="18.0" layoutY="14.0"
-             prefHeight="17.0" prefWidth="223.0" text="Username already taken!"
-             textAlignment="CENTER" textFill="RED" />
+             prefHeight="17.0" prefWidth="223.0"
+             text="Username/email already used!" textAlignment="CENTER"
+             textFill="RED" />
       <Label fx:id="warningRequired" layoutX="18.0" layoutY="188.0"
              prefHeight="17.0" prefWidth="223.0"
              text="Username and Password required!" textFill="RED" />

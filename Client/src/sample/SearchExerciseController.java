@@ -9,6 +9,7 @@ import javafx.scene.layout.GridPane;
 import javafx.scene.layout.RowConstraints;
 import javafx.stage.Stage;
 
+import example.*;
 import java.net.URL;
 import java.util.ResourceBundle;
 

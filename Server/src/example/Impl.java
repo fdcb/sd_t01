@@ -2,7 +2,7 @@ package example;
 import java.rmi.*;
 import java.rmi.server.UnicastRemoteObject;
 
-
+/*
 
 public class Impl extends UnicastRemoteObject implements RMIInterface
 {
@@ -23,3 +23,4 @@ public class Impl extends UnicastRemoteObject implements RMIInterface
         return new java.util.Date();
     }
 }
+*/

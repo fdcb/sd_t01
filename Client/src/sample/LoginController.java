@@ -10,6 +10,7 @@ import javafx.stage.Stage;
 
 import java.net.URL;
 import java.util.ResourceBundle;
+import example.*;
 
 /**
  * Class with the methods to help with the Login scene.
@@ -109,10 +110,11 @@ public class LoginController implements Initializable{
 	 */
 	private void confirmButtonActionPerformed(){
 		confirmButton.setOnAction(event -> {
-			Main.connectServer();
+
 			String username = usernameTF.getText(),
 					password = passwordF.getText();
-			if(username.equals("") || password.equals(""))
+            User user = ConnectServer.validateUser(username, password);
+			if(user == null)
 				warningErrorL.setVisible(true);
 			else{
 				Main.gotoNewScene((Stage) confirmButton.getScene().getWindow(),
