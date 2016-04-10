@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<TitledPane fx:id="addExerciseTP" maxHeight="-Infinity" maxWidth="-Infinity"
+            minHeight="-Infinity" minWidth="-Infinity" prefHeight="350.0"
+            prefWidth="600.0" text="UC name will be here"
+            xmlns="http://javafx.com/javafx/8"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="sample.AddExerciseController">
+   <content>
+      <Pane prefHeight="343.0" prefWidth="598.0">
+         <children>
+            <Label layoutX="14.0" layoutY="14.0"
+                   text="Write your exercise bellow:">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <TextArea fx:id="addExerciseTA" layoutX="14.0" layoutY="34.0"
+                      prefHeight="210.0" prefWidth="563.0" />
+            <Button fx:id="submitAEButton" layoutX="479.0" layoutY="269.0"
+                    mnemonicParsing="false" prefHeight="25.0"
+                    prefWidth="100.0"  text="Submit">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor></Button>
+            <Button fx:id="cancelAEButton" cancelButton="true"
+                    layoutX="364.0"  layoutY="269.0" mnemonicParsing="false"
+                    prefHeight="25.0" prefWidth="100.0" text="Cancel">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor></Button>
+         </children>
+      </Pane>
+   </content>
+</TitledPane>
