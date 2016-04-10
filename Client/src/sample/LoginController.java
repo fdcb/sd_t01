@@ -109,6 +109,7 @@ public class LoginController implements Initializable{
 	 */
 	private void confirmButtonActionPerformed(){
 		confirmButton.setOnAction(event -> {
+			Main.connectServer();
 			String username = usernameTF.getText(),
 					password = passwordF.getText();
 			if(username.equals("") || password.equals(""))
