@@ -83,6 +83,7 @@ public class RegisterController implements Initializable{
 	 */
 	private void confirmButtonActionPerformed(){
 		regConfirmButton.setOnAction(event -> {
+
 			String username = regUsernameTF.getText(),
 					password = regPasswordF.getText(),
 					email = emailTF.getText();
@@ -94,7 +95,6 @@ public class RegisterController implements Initializable{
 				warningUsername.setVisible(true);
 				warningRequired.setVisible(false);
 			}
-
 		});
 	}
 }

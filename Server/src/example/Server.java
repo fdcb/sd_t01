@@ -1,11 +1,12 @@
 package example;
 
 import java.rmi.*;
-public class Server
-{
+public class Server{
+
     public static void main(String[] argv) {
         System.setProperty("java.security.policy", "C:\\T01SD\\Server\\src" +
                 "\\java.policy");
+
         System.setSecurityManager(new RMISecurityManager());
         try { //Iniciar a execução do registry no porto desejado
             java.rmi.registry.LocateRegistry.createRegistry(1099);
