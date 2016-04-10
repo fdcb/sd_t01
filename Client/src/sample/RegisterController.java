@@ -1,5 +1,6 @@
 package sample;
 
+import example.User;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
@@ -87,14 +88,16 @@ public class RegisterController implements Initializable{
 			String username = regUsernameTF.getText(),
 					password = regPasswordF.getText(),
 					email = emailTF.getText();
+            User oUser = ConnectServer.registerUser(username,password,email);
 			if(username.equals("") || password.equals("")) {
 				warningRequired.setVisible(true);
-				warningUsername.setVisible(false);
 			}
+            else if(oUser == null)
+                warningUsername.setVisible(false);
+
 			else {
-				warningUsername.setVisible(true);
-				warningRequired.setVisible(false);
-			}
+                System.out.println("ohhhhh it worked?????? *-* ");
+            }
 		});
 	}
 }

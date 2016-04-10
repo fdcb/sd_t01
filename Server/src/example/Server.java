@@ -17,7 +17,7 @@ public class Server{
         }
 
         try {
-            Impl implementaInterface = new Impl("Impl");
+            UserImpl implementaInterface = new UserImpl("Impl");
             System.out.println("Servidor está OK");
         } catch (Exception e) {
             System.out.println("Erro no servidor " + e);
