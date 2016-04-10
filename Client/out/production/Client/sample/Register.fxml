@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity"
+      minWidth="-Infinity" prefHeight="219.0" prefWidth="258.0"
+      xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="sample.RegisterController">
+    <children>
+        <Button fx:id="regCancelButton" cancelButton="true" layoutX="18.0"
+                layoutY="154.0" mnemonicParsing="false" prefHeight="25.0"
+                prefWidth="98.0" text="Cancel">
+            <cursor>
+                <Cursor fx:constant="HAND" />
+            </cursor></Button>
+        <Button fx:id="regConfirmButton" defaultButton="true" layoutX="137.0"
+                layoutY="154.0" mnemonicParsing="false" prefHeight="25.0"
+                prefWidth="98.0" text="Confirm">
+            <cursor>
+                <Cursor fx:constant="HAND" />
+            </cursor></Button>
+        <TextField fx:id="regUsernameTF" layoutX="86.0" layoutY="39.0" />
+        <Label layoutX="20.0" layoutY="43.0" prefHeight="17.0"
+               prefWidth="61.0"  text="Username: " />
+        <Label layoutX="20.0" layoutY="121.0" text="Password:" />
+        <PasswordField fx:id="regPasswordF" layoutX="86.0" layoutY="117.0" />
+      <Label layoutX="20.0" layoutY="82.0" prefHeight="17.0" prefWidth="61.0"
+             text="Email:" />
+      <TextField fx:id="emailTF" layoutX="86.0" layoutY="78.0" />
+      <Label fx:id="warningUsername" layoutX="18.0" layoutY="14.0"
+             prefHeight="17.0" prefWidth="223.0" text="Username already taken!"
+             textAlignment="CENTER" textFill="RED" />
+      <Label fx:id="warningRequired" layoutX="18.0" layoutY="188.0"
+             prefHeight="17.0" prefWidth="223.0"
+             text="Username and Password required!" textFill="RED" />
+    </children>
+</Pane>

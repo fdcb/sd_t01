@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" build-on-make="true" name="sd_t01_server:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/sd_t01_server_jar</output-path>
+    <root id="archive" name="sd_t01_server.jar">
+      <element id="module-output" name="sd_t01_server" />
+    </root>
+  </artifact>
+</component>
