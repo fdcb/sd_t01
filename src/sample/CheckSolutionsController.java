@@ -2,8 +2,11 @@ package sample;
 
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.control.Button;
+import javafx.scene.control.Label;
+import javafx.stage.Stage;
 
-import java.awt.*;
+
 import java.net.URL;
 import java.util.ResourceBundle;
 
@@ -31,11 +34,15 @@ public class CheckSolutionsController implements Initializable{
 
     public void initialize(URL fxmlFileLocation, ResourceBundle resources){
         assertAll();
+        correctButtonActionPerformed();
+        wrongButtonActionPerformed();
+        backButtonActionPerformed();
     }
 
     /**
      *  Injects all {@link FXML} variables.
      */
+
     private void assertAll(){
         assert solutionCSLabel != null : "fx:id=\"solutionCSLabel\" was not " +
                 "injected: check your FXML file '" + FILE_NAME + "'.";
@@ -45,5 +52,41 @@ public class CheckSolutionsController implements Initializable{
                 "not injected: check your FXML file '" + FILE_NAME + "'.";
         assert backCSButton != null : "fx:id=\"backCSButton\" was " +
                 "not injected: check your FXML file '" + FILE_NAME + "'.";
+    }
+
+    /**
+     * Changes the {@link CheckSolutionsController#backCSButton} so that it
+     * returns to the previous menu.
+     */
+    private void backButtonActionPerformed(){
+        backCSButton.setOnAction(event -> {
+            Stage stage = (Stage) backCSButton.getScene().getWindow();
+            stage.close();
+            System.exit(0);
+        });
+    }
+
+    /**
+     * Changes the {@link CheckSolutionsController#wrongCSButton} so that it
+     * returns to the previous menu.
+     */
+    private void wrongButtonActionPerformed(){
+        wrongCSButton.setOnAction(event -> {
+            Stage stage = (Stage) wrongCSButton.getScene().getWindow();
+            stage.close();
+            System.exit(0);
+        });
+    }
+
+    /**
+     * Changes the {@link CheckSolutionsController#wrongCSButton} so that it
+     * returns to the previous menu.
+     */
+    private void correctButtonActionPerformed(){
+        correctCSButton.setOnAction(event -> {
+            Stage stage = (Stage) correctCSButton.getScene().getWindow();
+            stage.close();
+            System.exit(0);
+        });
     }
 }
