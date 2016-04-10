@@ -1,5 +1,6 @@
 package sample;
 
+import example.RMIInterface;
 import java.rmi.*;
 import java.util.Date;
 
