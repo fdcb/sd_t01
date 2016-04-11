@@ -33,7 +33,7 @@ public class ConnectServer{
             return myServerObject.validateUser(userName,password);
 
         } catch(Exception e) {
-            System.out.println("Exception occured: " + e);
+            System.out.println("VU: Exception occured: " + e);
             System.exit(0);
         }
         return null;
@@ -62,7 +62,7 @@ public class ConnectServer{
             return myServerObject.registerUser(userName, password, email);
 
         } catch(Exception e) {
-            System.out.println("Exception occured: " + e);
+            System.out.println("CS: Exception occured: " + e);
             System.exit(0);
         }
         return null;

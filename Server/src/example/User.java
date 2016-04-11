@@ -1,8 +1,6 @@
 package example;
 
-import java.rmi.Naming;
-import java.rmi.RemoteException;
-import java.rmi.server.UnicastRemoteObject;
+import java.io.Serializable;
 
 /**
  * Represents a user of the platform.
@@ -11,7 +9,7 @@ import java.rmi.server.UnicastRemoteObject;
  * @author Filipa Brito
  * @author André Ramos
  */
-public class User {
+public class User implements Serializable{
     private String username, email,password;
     private static int cod;
 
@@ -44,7 +42,7 @@ public class User {
         super();
         this.password = password;
         this.username = username;
-        this.email = "Unknown";
+        this.email = "";
         this.cod++;
     }
 

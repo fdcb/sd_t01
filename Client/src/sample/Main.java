@@ -1,6 +1,4 @@
 package sample;
-import example.RMIInterface;
-import example.*;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -8,8 +6,6 @@ import javafx.scene.Scene;
 import javafx.stage.Stage;
 
 import java.io.IOException;
-import java.rmi.Naming;
-import java.rmi.RMISecurityManager;
 
 public class Main extends Application {
 
@@ -39,8 +35,8 @@ public class Main extends Application {
 	public static void gotoNewScene(Stage stage, String filename, String
 			windowTitle){
 		try {
-			Parent root = FXMLLoader.load(Main.class.getResource
-                    (filename));
+            Parent root = FXMLLoader.load(Main.class
+                    .getResource(filename));
 			stage.setScene(new Scene(root));
 			stage.setTitle(windowTitle);
 			stage.show();

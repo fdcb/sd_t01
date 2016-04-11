@@ -1,13 +1,17 @@
 package sample;
 
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 
+import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 import example.*;
@@ -117,9 +121,22 @@ public class LoginController implements Initializable{
 			if(user == null)
 				warningErrorL.setVisible(true);
 			else{
-				Main.gotoNewScene((Stage) confirmButton.getScene().getWindow(),
+				/*Main.gotoNewScene((Stage) confirmButton.getScene()
+				.getWindow(),
+
 						AddExerciseController.FILE_NAME,
-						AddExerciseController.WINDOW_TITLE);
+						AddExerciseController.WINDOW_TITLE);*/
+                Stage primaryStage = (Stage) confirmButton.getScene()
+                        .getWindow();
+                try {
+                    Parent root = FXMLLoader.load(getClass().getResource
+                            (CheckSolutionsController.FILE_NAME));
+                    primaryStage.setScene(new Scene(root));
+                    primaryStage.setTitle(CheckSolutionsController.WINDOW_TITLE);
+                    primaryStage.show();
+                }catch (IOException e) {
+                    System.out.println(e.getMessage());
+                }
 			}
 		});
 	}

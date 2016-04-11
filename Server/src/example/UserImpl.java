@@ -30,7 +30,7 @@ public class UserImpl extends UnicastRemoteObject implements RMIInterface{
             RemoteException{
 
         Vector<User> allUsers = ReadWriteFile.readFileUser();
-
+        if(allUsers == null) System.out.println("doing something wrong");
         for(int i = 0; i < allUsers.size(); i++){
             if(allUsers.elementAt(i).getUsername().equals(name) && allUsers
                     .elementAt(i).getPassword().equals(password))
@@ -44,18 +44,19 @@ public class UserImpl extends UnicastRemoteObject implements RMIInterface{
 
         Vector<User> allUsers = ReadWriteFile.readFileUser();
         User tempUser;
+        if(allUsers != null)
+            for(int i = 0; i < allUsers.size(); i++)
+                if(allUsers.elementAt(i).getUsername().equals(name) || allUsers
+                        .elementAt(i).getEmail().equals(email))
+                    return allUsers.elementAt(i);
 
-        for(int i = 0; i < allUsers.size(); i++){
-            if(allUsers.elementAt(i).getUsername().equals(name) || allUsers
-                    .elementAt(i).getEmail().equals(email))
-                return allUsers.elementAt(i);
-        }
         if(email.equals(""))
             tempUser = new User(name, password);
         else
-            tempUser = new User(name,password, email);
+            tempUser = new User(name, password, email);
+        if(allUsers == null)
+            allUsers = new Vector <>();
         allUsers.add(tempUser);
-
         ReadWriteFile.writeFileUser(allUsers);
         return tempUser;
     }
