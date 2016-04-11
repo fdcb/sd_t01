@@ -13,6 +13,7 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 import java.net.URL;
+import java.net.URLClassLoader;
 import java.util.ResourceBundle;
 import example.*;
 
@@ -117,6 +118,7 @@ public class LoginController implements Initializable{
 
 			String username = usernameTF.getText(),
 					password = passwordF.getText();
+            URL url = Main.SUC_FXML;
             User user = ConnectServer.validateUser(username, password);
 			if(user == null)
 				warningErrorL.setVisible(true);
@@ -129,10 +131,10 @@ public class LoginController implements Initializable{
                 Stage primaryStage = (Stage) confirmButton.getScene()
                         .getWindow();
                 try {
-                    Parent root = FXMLLoader.load(getClass().getResource
-                            (CheckSolutionsController.FILE_NAME));
+
+                    Parent root = FXMLLoader.load(url);
                     primaryStage.setScene(new Scene(root));
-                    primaryStage.setTitle(CheckSolutionsController.WINDOW_TITLE);
+                    primaryStage.setTitle(SearchUcController.WINDOW_TITLE);
                     primaryStage.show();
                 }catch (IOException e) {
                     System.out.println(e.getMessage());
