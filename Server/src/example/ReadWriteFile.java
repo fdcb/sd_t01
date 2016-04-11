@@ -10,17 +10,20 @@ public class ReadWriteFile{
 
     static public Vector<User> readFileUser(){
 
-        Vector<User> allUsers = null;
+        Vector<User> allUsers = new Vector <>();
         User tempUser;
 
         File file = new File(User.USER_FILENAME);
         try{
             ObjectInputStream is = new ObjectInputStream(new FileInputStream
                     (file));
-            while((tempUser = (User)is.readObject())!=null)
+            allUsers.add((User)is.readObject());
+          /*  while((tempUser = (User)is.readObject())!=null){
                 allUsers.add(tempUser);
+                System.out.println("whyyy");
+            }*/
         }catch (IOException e){
-            return null;
+            System.out.println("Error reading file");
         }
         catch (ClassNotFoundException e){
             System.exit(0);
@@ -39,7 +42,7 @@ public class ReadWriteFile{
                 os.writeObject(allUsers.elementAt(i));
             os.flush();
         }catch (IOException e){
-            System.exit(0);
+            System.out.println("Error writing in file.");
         }
     }
 }
