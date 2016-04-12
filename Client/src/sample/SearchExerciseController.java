@@ -12,6 +12,7 @@ import javafx.stage.Stage;
 import example.*;
 import java.net.URL;
 import java.util.ResourceBundle;
+import java.util.Vector;
 
 import static javafx.scene.layout.Region.USE_PREF_SIZE;
 
@@ -30,6 +31,7 @@ public class SearchExerciseController implements Initializable{
     @FXML private Button backSEButton;
     @FXML private GridPane exerciseSEGridPane;
     @FXML private TextField exeNumberSETextField;
+    private Vector<Exercise> exerciseVector, closedExercises, openExercises;
 
     /**
      * Title of the SearchExercise window.
@@ -43,9 +45,18 @@ public class SearchExerciseController implements Initializable{
     @Override
     public void initialize(URL fxmlFileLocation, ResourceBundle resources){
         assertAll();
+        exerciseVector = ConnectServer.getExerciseFromUC();
+        closedExercises = new Vector <>();
+        openExercises = new Vector <>();
+        for(int i = 0; i < exerciseVector.size(); i++){
+            if(exerciseVector.elementAt(i).getState() == Exercise.STATE_CLOSED)
+                closedExercises.add(exerciseVector.elementAt(i));
+            else
+                openExercises.add(exerciseVector.elementAt(i));
+        }
         backButtonActionPerformed();
         addNewButtonActionPerformed();
-        addButtonsToGridLayout(new int[]{1,2,3,4,5,62,21,31,2,4});
+        addButtonsToGridLayout(exerciseVector);
         openButtonActionPerformed();
         closeButtonActionPerformed();
         searchButtonActionPerformed();
@@ -78,9 +89,8 @@ public class SearchExerciseController implements Initializable{
      */
     private void backButtonActionPerformed(){
         backSEButton.setOnAction(event -> {
-            Stage stage = (Stage) backSEButton.getScene().getWindow();
-            stage.close();
-            System.exit(0);
+            Main.gotoNewScene((Stage) backSEButton.getScene().getWindow(),
+                    Main.SUC_FXML, SearchUcController.WINDOW_TITLE);
         });
     }
 
@@ -90,10 +100,15 @@ public class SearchExerciseController implements Initializable{
      */
     private void searchButtonActionPerformed(){
         searchSEButton.setOnAction(event -> {
-            System.out.print(exeNumberSETextField.getText());
-            Stage stage = (Stage) backSEButton.getScene().getWindow();
-            stage.close();
-            System.exit(0);
+            int exer = Integer.getInteger(exeNumberSETextField.getText());
+            exerciseSEGridPane.getChildren().clear();
+            for(int i = 0; i < exerciseVector.size(); i++)
+                if(exerciseVector.elementAt(i).getCod() == exer){
+                    Vector<Exercise> exerV = new Vector <>();
+                    exerV.add(exerciseVector.elementAt(i));
+                    addButtonsToGridLayout(exerV);
+                    return;
+                }
         });
     }
 
@@ -104,7 +119,7 @@ public class SearchExerciseController implements Initializable{
     private void addNewButtonActionPerformed(){
         addNewSEButton.setOnAction(event ->
                 Main.gotoNewScene((Stage) addNewSEButton.getScene().getWindow(),
-                        Main.AE_FXML, AddExerciseController.WINDOW_TITLE)
+                        Main., AddExerciseController.WINDOW_TITLE)
         );
     }
 
@@ -115,9 +130,8 @@ public class SearchExerciseController implements Initializable{
     private void openButtonActionPerformed(){
         openSEButton.setOnAction(event -> {
             exerciseSEGridPane.getChildren().clear();
-            addButtonsToGridLayout(new int[]{3, 2, 4, 1});
-            }
-        );
+            addButtonsToGridLayout(openExercises);
+        });
     }
 
     /**
@@ -127,23 +141,23 @@ public class SearchExerciseController implements Initializable{
     private void closeButtonActionPerformed(){
         closeSEButton.setOnAction(event -> {
             exerciseSEGridPane.getChildren().clear();
-            addButtonsToGridLayout(new int[]{2,3,4,1,12,235,231,3,23, 2,
-                    4, 1});
-                }
-        );
+            addButtonsToGridLayout(closedExercises);
+        });
     }
 
     /**
      * Creates a button with the number of the exercise.
      *
-     * @param exerciseNumber number of the exercise to write on the button
+     * @param exercise the exercise to write on the button
      * @return a button with the number of the exercise
      */
-    private Button createButton(String exerciseNumber){
-        Button button = new Button(exerciseNumber);
-        button.setOnAction(event ->
+    private Button createButton(Exercise exercise){
+        Button button = new Button(Integer.toString(exercise.getCod()));
+        button.setOnAction(event -> {
+                Main.exercise_id = exercise.getCod();
                 Main.gotoNewScene((Stage) addNewSEButton.getScene().getWindow(),
-                        Main.AE_FXML, AddExerciseController.WINDOW_TITLE));
+                        Main.AE_FXML, AddExerciseController.WINDOW_TITLE);
+        });
         return button;
     }
 
@@ -151,10 +165,9 @@ public class SearchExerciseController implements Initializable{
      * Changes the {@link SearchExerciseController#exerciseSEGridPane} in
      * order to have the buttons for all the exercises of that uc.
      */
-    private void addButtonsToGridLayout(int[] numbers){
-       /* String[] names = {"nome1", "nome2", "nome3", "nome4","nome5",
-       "1nome1", "1nome2", "1nome3", "1nome4","1ndddddddome5"};*/
-        int gridSize = (int)Math.ceil(Math.sqrt(numbers.length));
+    private void addButtonsToGridLayout(Vector<Exercise> exercises){
+        if(exercises.size() == 0) return;
+        int gridSize = (int)Math.ceil(Math.sqrt(exercises.size()));
         int row = 0, col = 0;
         ColumnConstraints cc = new ColumnConstraints();
         cc.setMaxWidth(USE_PREF_SIZE);
@@ -168,8 +181,8 @@ public class SearchExerciseController implements Initializable{
         exerciseSEGridPane.getRowConstraints().add(0,rc);
 
         System.out.print(gridSize);
-        for (int i = 0; i < numbers.length; i++){
-            exerciseSEGridPane.add(createButton(Integer.toString(numbers[i]))
+        for (int i = 0; i < exercises.size(); i++){
+            exerciseSEGridPane.add(createButton(exercises.elementAt(i))
                     ,col,row);
 
             if(row == 0)

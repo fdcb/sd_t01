@@ -18,7 +18,6 @@ import java.util.ResourceBundle;
  */
 public class AddExerciseController implements Initializable {
 
-	@FXML private TitledPane addExerciseTP;
 	@FXML private TextArea addExerciseTA;
 	@FXML private Button submitAEButton;
 	@FXML private Button cancelAEButton;
@@ -43,8 +42,6 @@ public class AddExerciseController implements Initializable {
 	 *  Injects all {@link FXML} variables.
 	 */
 	private void assertAll(){
-		assert addExerciseTP != null : "fx:id=\"addExerciseTP\" was not " +
-				"injected: check your FXML file '" + FILE_NAME + "'.";
 		assert addExerciseTA != null : "fx:id=\"addExerciseTA\" was not " +
 				"injected: check your FXML file '" + FILE_NAME + "'.";
 		assert submitAEButton != null : "fx:id=\"warningErrorL\" was not " +
@@ -60,7 +57,7 @@ public class AddExerciseController implements Initializable {
 	private void cancelButtonActionPerformed(){
 		cancelAEButton.setOnAction(event ->
 			Main.gotoNewScene((Stage) cancelAEButton.getScene().getWindow(),
-					Main.L_FXML, LoginController.WINDOW_TITLE)
+					Main.SE_FXML, SearchExerciseController.WINDOW_TITLE)
 		);
 	}
 	/**
@@ -70,7 +67,9 @@ public class AddExerciseController implements Initializable {
 	private void submitButtonActionPerformed(){
 		submitAEButton.setOnAction(event ->{
 			String exercise = addExerciseTA.getText();
-			System.out.println(exercise);
+            ConnectServer.addExercise(exercise);
+            Main.gotoNewScene((Stage) submitAEButton.getScene().getWindow(),
+                    Main.SE_FXML, SearchUcController.WINDOW_TITLE);
 		});
 	}
 

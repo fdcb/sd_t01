@@ -45,7 +45,7 @@ public class SearchUcController implements Initializable{
         backButtonActionPerformed();
         addNewButtonActionPerformed();
         ucVector = ConnectServer.getAllUC();
-        addButtonstoGridLayout(ucVector);
+        addButtonsToGridLayout(ucVector);
         checkBoxActionPerformed();
     }
 
@@ -89,14 +89,15 @@ public class SearchUcController implements Initializable{
     /**
      * Creates a button with the uc name.
      *
-     * @param ucName name of the UC
+     * @param oUC object of the UC
      * @return a button with the name of the UC
      */
-    private Button createButton(String ucName){
-        Button button = new Button(ucName);
+    private Button createButton(UC oUC){
+        Button button = new Button(oUC.getName());
+        Main.uc_id = oUC.getCod();
         button.setOnAction(event ->
             Main.gotoNewScene((Stage) addNewSUButton.getScene().getWindow(),
-                    Main.AE_FXML, AddExerciseController.WINDOW_TITLE));
+                    Main.SE_FXML, SearchExerciseController.WINDOW_TITLE));
         return button;
     }
 
@@ -104,7 +105,7 @@ public class SearchUcController implements Initializable{
      * Changes the {@link SearchUcController#ucNamesSUGridPane} in order to
      * have the buttons for all the UC's with exercises in the platform.
      */
-    private void addButtonstoGridLayout(Vector<UC> allUC){
+    private void addButtonsToGridLayout(Vector<UC> allUC){
         if(allUC.size() == 0) return;
 
         int gridSize = (int)Math.ceil(Math.sqrt(allUC.size()));
@@ -122,8 +123,7 @@ public class SearchUcController implements Initializable{
 
         System.out.print(gridSize);
         for (int i = 0; i < allUC.size(); i++){
-            ucNamesSUGridPane.add(createButton(allUC.elementAt(i).getName())
-                    ,col,row);
+            ucNamesSUGridPane.add(createButton(allUC.elementAt(i)),col,row);
             if(row == 0)
                 ucNamesSUGridPane.getColumnConstraints().add(col + 1, cc);
             if(col + 1 > gridSize - 1){
@@ -144,11 +144,11 @@ public class SearchUcController implements Initializable{
                 for(int i = 0; i < ucVector.size(); i++)
                     if(ucVector.elementAt(i).getExerciseCount() != 0)
                         ucWithExercise.add(ucVector.elementAt(i));
-                addButtonstoGridLayout(ucWithExercise);
+                addButtonsToGridLayout(ucWithExercise);
                 return;
             }
             ucNamesSUGridPane.getChildren().clear();
-            addButtonstoGridLayout(ucVector);
+            addButtonsToGridLayout(ucVector);
         });
     }
 }

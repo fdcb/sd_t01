@@ -24,6 +24,10 @@ public class Main extends Application {
     public static URL SUC_FXML = null;
     public static URL AUC_FXML = null;
 
+    public static int user_id;
+    public static int uc_id;
+    public static int exercise_id;
+
     @Override
     public void start(Stage primaryStage){
 		//gotoNewScene(primaryStage, LoginController.FILE_NAME,
