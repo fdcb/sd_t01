@@ -60,7 +60,7 @@ public class AddExerciseController implements Initializable {
 	private void cancelButtonActionPerformed(){
 		cancelAEButton.setOnAction(event ->
 			Main.gotoNewScene((Stage) cancelAEButton.getScene().getWindow(),
-					LoginController.FILE_NAME, LoginController.WINDOW_TITLE)
+					Main.L_FXML, LoginController.WINDOW_TITLE)
 		);
 	}
 	/**

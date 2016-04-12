@@ -73,7 +73,7 @@ public class RegisterController implements Initializable{
 	private void cancelButtonActionPerformed(){
 		regCancelButton.setOnAction(
 				event -> Main.gotoNewScene((Stage) regCancelButton.getScene()
-								.getWindow(), LoginController.FILE_NAME,
+								.getWindow(),Main.L_FXML,
 						LoginController.WINDOW_TITLE)
 		);
 	}
@@ -96,7 +96,9 @@ public class RegisterController implements Initializable{
                 warningUsername.setVisible(false);
 
 			else {
-                System.out.println("ohhhhh it worked?????? *-* ");
+                Main.gotoNewScene((Stage) regConfirmButton.getScene()
+		                .getWindow(), Main.SUC_FXML, SearchUcController
+		                .WINDOW_TITLE );
             }
 		});
 	}

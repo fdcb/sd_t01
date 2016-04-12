@@ -72,8 +72,7 @@ public class SearchUcController implements Initializable{
     private void addNewButtonActionPerformed(){
        addNewSUButton.setOnAction(event ->
             Main.gotoNewScene((Stage) addNewSUButton.getScene().getWindow(),
-                    AddExerciseController.FILE_NAME,
-                    AddExerciseController.WINDOW_TITLE)
+                    Main.AE_FXML, AddExerciseController.WINDOW_TITLE)
        );
     }
 
@@ -87,8 +86,7 @@ public class SearchUcController implements Initializable{
         Button button = new Button(ucName);
         button.setOnAction(event ->
             Main.gotoNewScene((Stage) addNewSUButton.getScene().getWindow(),
-                    AddExerciseController.FILE_NAME,
-                    AddExerciseController.WINDOW_TITLE));
+                    Main.AE_FXML, AddExerciseController.WINDOW_TITLE));
         return button;
     }
 
