@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-
+<?import java.lang.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
@@ -33,7 +33,10 @@
               mnemonicParsing="false" prefHeight="25.0" prefWidth="94.0"
               text="Add New" />
       <Button fx:id="backSUButton" cancelButton="true" defaultButton="true"
-              layoutX="14.0" layoutY="341.0" mnemonicParsing="false"
+              layoutX="378.0" layoutY="341.0" mnemonicParsing="false"
               prefHeight="25.0" prefWidth="94.0" text="Back" />
+      <CheckBox fx:id="exerciseSUCheckBox" layoutX="14.0" layoutY="345.0"
+                mnemonicParsing="false"
+                text="Show Only Classes with Exercises." />
    </children>
 </Pane>
