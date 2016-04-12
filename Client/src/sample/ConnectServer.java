@@ -54,4 +54,25 @@ public class ConnectServer{
         }
         return null;
     }
+
+    static public Vector<Exercise> getExerciseFromUC(){
+        try {
+            return Main.myServerObject.getExercisesFromUC(Main.uc_id);
+        } catch(Exception e) {
+            System.out.println("CS: Exception occured: " + e);
+            System.exit(0);
+        }
+        return null;
+    }
+
+    static public void addExercise(String description){
+        try {
+            Main.myServerObject.addExercise(Main.uc_id, Main.user_id,
+                    description);
+        } catch(Exception e) {
+            System.out.println("CS: Exception occured: " + e);
+            System.exit(0);
+        }
+    }
+
 }

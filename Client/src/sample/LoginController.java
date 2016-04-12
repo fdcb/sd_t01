@@ -122,15 +122,10 @@ public class LoginController implements Initializable{
 			if(user == null)
 				warningErrorL.setVisible(true);
 			else{
-				/*Main.gotoNewScene((Stage) confirmButton.getScene()
-				.getWindow(),
-
-						AddExerciseController.FILE_NAME,
-						AddExerciseController.WINDOW_TITLE);*/
                 Stage primaryStage = (Stage) confirmButton.getScene()
                         .getWindow();
                 try {
-
+	                Main.user_id = user.getCod();
                     Parent root = FXMLLoader.load(url);
                     primaryStage.setScene(new Scene(root));
                     primaryStage.setTitle(SearchUcController.WINDOW_TITLE);

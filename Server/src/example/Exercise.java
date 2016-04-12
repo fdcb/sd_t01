@@ -1,5 +1,7 @@
 package example;
 
+import java.io.Serializable;
+
 /**
  * Represents an Exercise related to a specific {@link UC}
  * An exercise has an unique code within a {@link UC}, the id of the {@link User}
@@ -9,7 +11,7 @@ package example;
  * @author Filipa Brito
  * @author André Ramos
  */
-public class Exercise {
+public class Exercise implements Serializable{
 
     private String state;
     private String description;
@@ -23,6 +25,8 @@ public class Exercise {
      * Used while there isn't any correct answer for the exercise.
      * */
     public static final String STATE_OPEN =	"Open";
+
+    public static final String FILE_NAME = "Exercises.dat";
 
     /**
      * Creates a new Exercise with the given description and code of the user

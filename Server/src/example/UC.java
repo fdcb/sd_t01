@@ -69,7 +69,7 @@ public class UC implements Serializable{
      *
      * @return The code of this UC
      */
-    public static int getCod() {
+    public int getCod() {
         return cod;
     }
 

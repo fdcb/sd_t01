@@ -63,4 +63,32 @@ public class ReadWriteFile{
             System.out.println("Error writing in file.");
         }
     }
+
+    static public Vector<Exercise> readFileExercises(){
+        Vector<Exercise> allExercises = new Vector <>();
+        File file = new File(Exercise.FILE_NAME);
+        try{
+            ObjectInputStream is = new ObjectInputStream(new FileInputStream
+                    (file));
+            allExercises = (Vector<Exercise>)is.readObject();
+        }catch (IOException e){
+            System.out.println("Error reading file");
+        }
+        catch (ClassNotFoundException e){
+            System.exit(0);
+        }
+        return allExercises;
+    }
+
+    static public void writeFileExercises(Vector<Exercise> allExercises){
+        File file = new File(Exercise.FILE_NAME);
+        try{
+            ObjectOutputStream os = new ObjectOutputStream(new FileOutputStream(
+                    (file)));
+            os.writeObject(allExercises);
+            os.flush();
+        }catch (IOException e){
+            System.out.println("Error writing in file.");
+        }
+    }
 }

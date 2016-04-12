@@ -11,6 +11,9 @@ public interface RMIInterface extends java.rmi.Remote{
             throws RemoteException;
     UC addUC(String className, String uniName) throws RemoteException;
     Vector<UC> getAllUC() throws RemoteException;
+    Vector<Exercise> getExercisesFromUC(int ucCod) throws RemoteException;
+    void addExercise(int ucCod, int userId, String description) throws
+            RemoteException;
 
    //public java.util.Date getDate() throws java.rmi.RemoteException;
 }
