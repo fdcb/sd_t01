@@ -1,7 +1,7 @@
 package sample;
 
 import example.RMIInterface;
-import example.User;
+import example.*;
 
 import java.rmi.Naming;
 import java.rmi.RMISecurityManager;
@@ -33,4 +33,15 @@ public class ConnectServer{
         }
         return null;
     }
+
+    static public UC addU(String className, String uniName){
+        try {
+            return Main.myServerObject.addUC(className,uniName);
+        } catch(Exception e) {
+            System.out.println("CS: Exception occured: " + e);
+            System.exit(0);
+        }
+        return null;
+    }
+
 }

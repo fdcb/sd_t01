@@ -1,5 +1,7 @@
 package example;
 
+import java.io.Serializable;
+
 /**
  * Represents a class from a university.
  * A class has an unique code, a name, an university name and the number of
@@ -8,7 +10,7 @@ package example;
  * @author Filipa Brito
  * @author André Ramos
  */
-public class UC {
+public class UC implements Serializable{
     private String name, uni;
     private static int cod = 0;
     private int exerciseCount = 0;
@@ -17,6 +19,8 @@ public class UC {
      * Used when the user doesn't specify the university name.
      * */
     public static final String NO_UNIVERSITY = "Unknown";
+
+    public static final String FILE_NAME = "Uc.dat";
 
     /**
      * Creates a new UC with the given UC name and University name.
