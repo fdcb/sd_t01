@@ -126,9 +126,9 @@ public class SearchExerciseController implements Initializable{
      */
     private void closeButtonActionPerformed(){
         closeSEButton.setOnAction(event -> {
-                    exerciseSEGridPane.getChildren().clear();
-                    addButtonsToGridLayout(new int[]{2,3,4,1,12,235,231,3,23, 2,
-                            4, 1});
+            exerciseSEGridPane.getChildren().clear();
+            addButtonsToGridLayout(new int[]{2,3,4,1,12,235,231,3,23, 2,
+                    4, 1});
                 }
         );
     }

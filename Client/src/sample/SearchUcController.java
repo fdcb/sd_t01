@@ -4,6 +4,7 @@ import example.UC;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
+import javafx.scene.control.CheckBox;
 import javafx.scene.layout.ColumnConstraints;
 import javafx.scene.layout.GridPane;
 import javafx.scene.layout.RowConstraints;
@@ -25,6 +26,9 @@ public class SearchUcController implements Initializable{
     @FXML private Button addNewSUButton;
     @FXML private Button backSUButton;
     @FXML private GridPane ucNamesSUGridPane;
+    @FXML private CheckBox exerciseSUCheckBox;
+
+    Vector<UC> ucVector;
 
     /**
      * Title of the SearchUC window.
@@ -40,7 +44,9 @@ public class SearchUcController implements Initializable{
         assertAll();
         backButtonActionPerformed();
         addNewButtonActionPerformed();
-        addButtonstoGridLayout();
+        ucVector = ConnectServer.getAllUC();
+        addButtonstoGridLayout(ucVector);
+        checkBoxActionPerformed();
     }
 
     /**
@@ -53,6 +59,8 @@ public class SearchUcController implements Initializable{
                 "injected: check your FXML file '" + FILE_NAME + "'.";
         assert ucNamesSUGridPane != null : "fx:id=\"ucNamesSUGridPane\" was " +
                 "not injected: check your FXML file '" + FILE_NAME + "'.";
+        assert exerciseSUCheckBox != null : "fx:id=\"exerciseSUCheckBox\" was" +
+                " not injected: check your FXML file '" + FILE_NAME + "'.";
     }
 
     /**
@@ -96,9 +104,7 @@ public class SearchUcController implements Initializable{
      * Changes the {@link SearchUcController#ucNamesSUGridPane} in order to
      * have the buttons for all the UC's with exercises in the platform.
      */
-    private void addButtonstoGridLayout(){
-        Vector<UC> allUC = ConnectServer.getAllUC();
-
+    private void addButtonstoGridLayout(Vector<UC> allUC){
         if(allUC.size() == 0) return;
 
         int gridSize = (int)Math.ceil(Math.sqrt(allUC.size()));
@@ -128,5 +134,21 @@ public class SearchUcController implements Initializable{
             else
                 col++;
         }
+    }
+
+    private void checkBoxActionPerformed(){
+        exerciseSUCheckBox.setOnAction(event -> {
+            if(exerciseSUCheckBox.isSelected()){
+                ucNamesSUGridPane.getChildren().clear();
+                Vector<UC> ucWithExercise = new Vector <>();
+                for(int i = 0; i < ucVector.size(); i++)
+                    if(ucVector.elementAt(i).getExerciseCount() != 0)
+                        ucWithExercise.add(ucVector.elementAt(i));
+                addButtonstoGridLayout(ucWithExercise);
+                return;
+            }
+            ucNamesSUGridPane.getChildren().clear();
+            addButtonstoGridLayout(ucVector);
+        });
     }
 }
