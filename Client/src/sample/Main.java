@@ -28,8 +28,7 @@ public class Main extends Application {
 		//gotoNewScene(primaryStage, LoginController.FILE_NAME,
 			//	LoginController.WINDOW_TITLE);
         try {
-            Parent root = FXMLLoader.load(getClass().getResource
-                    (LoginController.FILE_NAME));
+            Parent root = FXMLLoader.load(L_FXML);
             primaryStage.setScene(new Scene(root));
             primaryStage.setTitle(LoginController.WINDOW_TITLE);
             primaryStage.show();
@@ -61,21 +60,7 @@ public class Main extends Application {
 
     public static void main(String[] args) {
        // connectServer();
-        AE_FXML = Main.class.getClass().getResource(AddExerciseController.FILE_NAME);
-        AS_FXML = Main.class.getClass().getResource(AddSolutionController
-                .FILE_NAME);
-        CS_FXML = Main.class.getClass().getResource(CheckSolutionsController
-                .FILE_NAME);
-        DE_FXML = Main.class.getClass().getResource(DelExerciseController
-                .FILE_NAME);
-        L_FXML = Main.class.getClass().getResource(LoginController.FILE_NAME);
-        R_FXML = Main.class.getClass().getResource(RegisterController
-                .FILE_NAME);
-        SE_FXML = Main.class.getClass().getResource(SearchExerciseController
-                .FILE_NAME);
-        SUC_FXML = Main.class.getClass().getResource(SearchUcController
-                .FILE_NAME);
-
+        saveFXML();
         String serverName = "";
 	    System.setProperty("java.security.policy", "C:\\T01SD\\Client\\src" +
 			    "\\java.policy");
@@ -102,4 +87,22 @@ public class Main extends Application {
         launch(args);
 
     }
+
+	private static void saveFXML(){
+		AE_FXML = AddExerciseController.class.getResource(AddExerciseController
+                .FILE_NAME);
+		AS_FXML = AddSolutionController.class.getResource
+                (AddSolutionController.FILE_NAME);
+		CS_FXML = CheckSolutionsController.class.getResource
+                (CheckSolutionsController.FILE_NAME);
+		DE_FXML = DelExerciseController.class.getResource(DelExerciseController
+				.FILE_NAME);
+		L_FXML = LoginController.class.getResource(LoginController.FILE_NAME);
+		R_FXML = RegisterController.class.getResource(RegisterController
+				.FILE_NAME);
+		SE_FXML = SearchUcController.class.getResource(SearchExerciseController
+				.FILE_NAME);
+		SUC_FXML = SearchUcController.class.getResource(SearchUcController
+				.FILE_NAME);
+	}
 }
