@@ -22,6 +22,7 @@ public class Main extends Application {
     public static URL R_FXML = null;
     public static URL SE_FXML = null;
     public static URL SUC_FXML = null;
+    public static URL AUC_FXML = null;
 
     @Override
     public void start(Stage primaryStage){
@@ -103,5 +104,7 @@ public class Main extends Application {
 				.FILE_NAME);
 		SUC_FXML = SearchUcController.class.getResource(SearchUcController
 				.FILE_NAME);
+        AUC_FXML = AddUCController.class.getResource(AddUCController
+                .FILE_NAME);
 	}
 }

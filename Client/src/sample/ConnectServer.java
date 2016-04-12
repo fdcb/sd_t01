@@ -5,6 +5,7 @@ import example.*;
 
 import java.rmi.Naming;
 import java.rmi.RMISecurityManager;
+import java.util.Vector;
 
 /**
  * Created by Filipa on 10/04/2016.
@@ -34,7 +35,7 @@ public class ConnectServer{
         return null;
     }
 
-    static public UC addU(String className, String uniName){
+    static public UC addUC(String className, String uniName){
         try {
             return Main.myServerObject.addUC(className,uniName);
         } catch(Exception e) {
@@ -44,4 +45,13 @@ public class ConnectServer{
         return null;
     }
 
+    static public Vector<UC> getAllUC(){
+        try {
+            return Main.myServerObject.getAllUC();
+        } catch(Exception e) {
+            System.out.println("CS: Exception occured: " + e);
+            System.exit(0);
+        }
+        return null;
+    }
 }

@@ -25,8 +25,7 @@ public class Impl extends UnicastRemoteObject implements RMIInterface{
         }
     }
 
-    public User validateUser(String name, String password) throws
-            RemoteException{
+    public User validateUser(String name, String password){
 
         Vector<User> allUsers = ReadWriteFile.readFileUser();
         for(int i = 0; i < allUsers.size(); i++)
@@ -37,8 +36,7 @@ public class Impl extends UnicastRemoteObject implements RMIInterface{
         return null;
     }
 
-    public User registerUser(String name, String password, String email) throws
-            RemoteException{
+    public User registerUser(String name, String password, String email){
 
         Vector<User> allUsers = ReadWriteFile.readFileUser();
         User tempUser;
@@ -73,5 +71,9 @@ public class Impl extends UnicastRemoteObject implements RMIInterface{
         allUCs.add(newUC);
         ReadWriteFile.writeFileUC(allUCs);
         return newUC;
+    }
+
+    public Vector<UC> getAllUC(){
+        return ReadWriteFile.readFileUC();
     }
 }
