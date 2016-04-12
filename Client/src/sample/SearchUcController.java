@@ -1,5 +1,6 @@
 package sample;
 
+import example.UC;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
@@ -10,6 +11,7 @@ import javafx.stage.Stage;
 
 import java.net.URL;
 import java.util.ResourceBundle;
+import java.util.Vector;
 
 import static javafx.scene.layout.Region.USE_PREF_SIZE;
 
@@ -72,7 +74,7 @@ public class SearchUcController implements Initializable{
     private void addNewButtonActionPerformed(){
        addNewSUButton.setOnAction(event ->
             Main.gotoNewScene((Stage) addNewSUButton.getScene().getWindow(),
-                    Main.AE_FXML, AddExerciseController.WINDOW_TITLE)
+                    Main.AUC_FXML, AddUCController.WINDOW_TITLE)
        );
     }
 
@@ -95,9 +97,11 @@ public class SearchUcController implements Initializable{
      * have the buttons for all the UC's with exercises in the platform.
      */
     private void addButtonstoGridLayout(){
-        String[] names = {"nome1", "nome2", "nome3", "nome4","nome5", "1nome1",
-                "1nome2", "1nome3", "1nome4","1ndddddddome5"};
-        int gridSize = (int)Math.ceil(Math.sqrt(names.length));
+        Vector<UC> allUC = ConnectServer.getAllUC();
+
+        if(allUC.size() == 0) return;
+
+        int gridSize = (int)Math.ceil(Math.sqrt(allUC.size()));
         int row = 0, col = 0;
         ColumnConstraints cc = new ColumnConstraints();
         cc.setMaxWidth(USE_PREF_SIZE);
@@ -111,9 +115,9 @@ public class SearchUcController implements Initializable{
         ucNamesSUGridPane.getRowConstraints().add(0,rc);
 
         System.out.print(gridSize);
-        for (int i = 0; i < names.length; i++){
-            ucNamesSUGridPane.add(createButton(names[i]),col,row);
-
+        for (int i = 0; i < allUC.size(); i++){
+            ucNamesSUGridPane.add(createButton(allUC.elementAt(i).getName())
+                    ,col,row);
             if(row == 0)
                 ucNamesSUGridPane.getColumnConstraints().add(col + 1, cc);
             if(col + 1 > gridSize - 1){
@@ -123,8 +127,6 @@ public class SearchUcController implements Initializable{
             }
             else
                 col++;
-
-
         }
     }
 }

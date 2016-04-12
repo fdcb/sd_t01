@@ -81,7 +81,7 @@ public class AddUCController implements Initializable{
         confirmAUButton.setOnAction(event -> {
             String className = classNameAUTextField.getText(),
                     uniName = uniNameAUTextField.getText();
-            UC newUC = ConnectServer.addU(className,uniName);
+            UC newUC = ConnectServer.addUC(className,uniName);
             if(newUC != null){
                 Stage stage = (Stage)confirmAUButton.getScene().getWindow();
                 Main.gotoNewScene(stage,Main.AE_FXML,AddExerciseController

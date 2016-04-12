@@ -4,14 +4,22 @@
 <?import java.lang.*?>
 <?import javafx.scene.layout.*?>
 
-
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="175.0" prefWidth="290.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity"
+      minWidth="-Infinity" prefHeight="175.0" prefWidth="290.0"
+      xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="sample.AddUCController">
    <children>
-      <Label layoutX="21.0" layoutY="30.0" text="Class Name:" />
-      <Label layoutX="21.0" layoutY="73.0" text="University Name:" />
-      <TextField fx:id="classNameAUTextField" layoutX="118.0" layoutY="26.0" />
-      <TextField fx:id="uniNameAUTextField" layoutX="118.0" layoutY="69.0" />
-      <Button fx:id="confirmAUcButton" layoutX="160.0" layoutY="117.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="82.0" text="Confirm" />
-      <Button fx:id="cancelAUButton" cancelButton="true" defaultButton="true" layoutX="44.0" layoutY="117.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="82.0" text="Cancel" />
+      <Label layoutX="22.0" layoutY="40.0" text="Class Name:" />
+      <Label layoutX="22.0" layoutY="83.0" text="University Name:" />
+      <TextField fx:id="classNameAUTextField" layoutX="119.0" layoutY="36.0" />
+      <TextField fx:id="uniNameAUTextField" layoutX="119.0" layoutY="79.0" />
+      <Button fx:id="confirmAUButton" layoutX="161.0" layoutY="127.0"
+              mnemonicParsing="false" prefHeight="25.0" prefWidth="82.0"
+              text="Confirm" />
+      <Button fx:id="cancelAUButton" cancelButton="true" defaultButton="true"
+              layoutX="45.0" layoutY="127.0" mnemonicParsing="false"
+              prefHeight="25.0" prefWidth="82.0" text="Cancel" />
+      <Label fx:id="flagAULabel" layoutX="22.0" layoutY="14.0" prefHeight="17.0"
+             prefWidth="149.0" text="Class already exists!" textFill="RED" />
    </children>
 </Pane>
