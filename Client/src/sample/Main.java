@@ -45,11 +45,10 @@ public class Main extends Application {
 	 * @param filename		Name of the fxml file to be loaded.
 	 * @param windowTitle	Name of the desired window title.
 	 */
-	public static void gotoNewScene(Stage stage, String filename, String
+	public static void gotoNewScene(Stage stage, URL filename, String
 			windowTitle){
 		try {
-            Parent root = FXMLLoader.load(Main.class
-                    .getResource(filename));
+            Parent root = FXMLLoader.load(filename);
 			stage.setScene(new Scene(root));
 			stage.setTitle(windowTitle);
 			stage.show();

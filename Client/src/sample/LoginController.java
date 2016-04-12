@@ -80,8 +80,7 @@ public class LoginController implements Initializable{
 	private void setGuestUserLabelToClickable(){
 		guestUserL.setOnMouseClicked(event ->
 			Main.gotoNewScene((Stage) guestUserL.getScene().getWindow(),
-				AddExerciseController.FILE_NAME,
-				AddExerciseController.WINDOW_TITLE)
+			Main.AE_FXML, AddExerciseController.WINDOW_TITLE)
 		);
 	}
 
@@ -92,7 +91,7 @@ public class LoginController implements Initializable{
 	private void setRegisterLabelToClickable(){
 		registerL.setOnMouseClicked(event ->
 			Main.gotoNewScene((Stage) registerL.getScene().getWindow(),
-				RegisterController.FILE_NAME, RegisterController.WINDOW_TITLE)
+				Main.R_FXML, RegisterController.WINDOW_TITLE)
 		);
 	}
 

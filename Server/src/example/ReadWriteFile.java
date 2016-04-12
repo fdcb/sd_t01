@@ -17,7 +17,8 @@ public class ReadWriteFile{
         try{
             ObjectInputStream is = new ObjectInputStream(new FileInputStream
                     (file));
-            allUsers.add((User)is.readObject());
+        //    while (is.)
+            allUsers = (Vector<User>)is.readObject();
           /*  while((tempUser = (User)is.readObject())!=null){
                 allUsers.add(tempUser);
                 System.out.println("whyyy");
@@ -38,8 +39,8 @@ public class ReadWriteFile{
         try{
             ObjectOutputStream os = new ObjectOutputStream(new FileOutputStream(
                     (file)));
-            for(int i = 0; i < allUsers.size(); i++)
-                os.writeObject(allUsers.elementAt(i));
+         //   for(int i = 0; i < allUsers.size(); i++)
+                os.writeObject(allUsers);
             os.flush();
         }catch (IOException e){
             System.out.println("Error writing in file.");
