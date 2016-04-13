@@ -57,7 +57,7 @@ public class AddExerciseController implements Initializable {
 	private void cancelButtonActionPerformed(){
 		cancelAEButton.setOnAction(event ->
 			Main.gotoNewScene((Stage) cancelAEButton.getScene().getWindow(),
-					Main.SE_FXML, SearchExerciseController.WINDOW_TITLE)
+					Main.SE_FXML, SearchExerciseController.WINDOW_TITLE, 0,"")
 		);
 	}
 	/**
@@ -69,7 +69,7 @@ public class AddExerciseController implements Initializable {
 			String exercise = addExerciseTA.getText();
             ConnectServer.addExercise(exercise);
             Main.gotoNewScene((Stage) submitAEButton.getScene().getWindow(),
-                    Main.SE_FXML, SearchUcController.WINDOW_TITLE);
+                    Main.SE_FXML, SearchUcController.WINDOW_TITLE,0,"");
 		});
 	}
 

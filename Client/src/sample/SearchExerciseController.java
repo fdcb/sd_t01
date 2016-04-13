@@ -16,55 +16,57 @@ import java.util.Vector;
 
 import static javafx.scene.layout.Region.USE_PREF_SIZE;
 
-/**
- * Class with the methods to help with the SearchExercise scene.
- *
- * @author Filipa Brito
- * @author André Ramos
- */
-public class SearchExerciseController implements Initializable{
-
-    @FXML private Button searchSEButton;
-    @FXML private Button openSEButton;
-    @FXML private Button closeSEButton;
-    @FXML private Button addNewSEButton;
-    @FXML private Button backSEButton;
-    @FXML private GridPane exerciseSEGridPane;
-    @FXML private TextField exeNumberSETextField;
-    private Vector<Exercise> exerciseVector, closedExercises, openExercises;
-
     /**
-     * Title of the SearchExercise window.
+     * Class with the methods to help with the SearchExercise scene.
+     *
+     * @author Filipa Brito
+     * @author André Ramos
      */
-    public static final String WINDOW_TITLE = "List of Exercises";
-    /**
-     * Name of the fxml file this class is associated with.
-     */
-    public static final String FILE_NAME = "SearchExercise.fxml" ;
+    public class SearchExerciseController implements Initializable{
 
-    @Override
-    public void initialize(URL fxmlFileLocation, ResourceBundle resources){
-        assertAll();
-        exerciseVector = ConnectServer.getExerciseFromUC();
-        closedExercises = new Vector <>();
-        openExercises = new Vector <>();
-        for(int i = 0; i < exerciseVector.size(); i++){
-            if(exerciseVector.elementAt(i).getState() == Exercise.STATE_CLOSED)
-                closedExercises.add(exerciseVector.elementAt(i));
-            else
-                openExercises.add(exerciseVector.elementAt(i));
+        @FXML private Button searchSEButton;
+        @FXML private Button openSEButton;
+        @FXML private Button closeSEButton;
+        @FXML private Button addNewSEButton;
+        @FXML private Button backSEButton;
+        @FXML private GridPane exerciseSEGridPane;
+        @FXML private TextField exeNumberSETextField;
+        private Vector<Exercise> exerciseVector, closedExercises, openExercises;
+
+        /**
+         * Title of the SearchExercise window.
+         */
+        public static final String WINDOW_TITLE = "List of Exercises";
+        /**
+         * Name of the fxml file this class is associated with.
+         */
+        public static final String FILE_NAME = "SearchExercise.fxml" ;
+
+        @Override
+        public void initialize(URL fxmlFileLocation, ResourceBundle resources){
+            assertAll();
+            if(Main.user_id == Solution.GUEST_COD)
+                addNewSEButton.setVisible(false);
+            exerciseVector = ConnectServer.getExerciseFromUC();
+            closedExercises = new Vector <>();
+            openExercises = new Vector <>();
+            for(int i = 0; i < exerciseVector.size(); i++){
+                if(exerciseVector.elementAt(i).getState().equals(Exercise.STATE_CLOSED))
+                    closedExercises.add(exerciseVector.elementAt(i));
+                else
+                    openExercises.add(exerciseVector.elementAt(i));
+            }
+            backButtonActionPerformed();
+            addNewButtonActionPerformed();
+            addButtonsToGridLayout(exerciseVector);
+            openButtonActionPerformed();
+            closeButtonActionPerformed();
+            searchButtonActionPerformed();
         }
-        backButtonActionPerformed();
-        addNewButtonActionPerformed();
-        addButtonsToGridLayout(exerciseVector);
-        openButtonActionPerformed();
-        closeButtonActionPerformed();
-        searchButtonActionPerformed();
-    }
 
-    /**
-     *  Injects all {@link FXML} variables.
-     */
+        /**
+         *  Injects all {@link FXML} variables.
+         */
     private void assertAll(){
         assert searchSEButton != null : "fx:id=\"searchSEButton\" was not " +
                 "injected: check your FXML file '" + FILE_NAME + "'.";
@@ -88,10 +90,10 @@ public class SearchExerciseController implements Initializable{
      * returns to the previous menu.
      */
     private void backButtonActionPerformed(){
-        backSEButton.setOnAction(event -> {
+        backSEButton.setOnAction(event ->
             Main.gotoNewScene((Stage) backSEButton.getScene().getWindow(),
-                    Main.SUC_FXML, SearchUcController.WINDOW_TITLE);
-        });
+                    Main.SUC_FXML, SearchUcController.WINDOW_TITLE, 0, "")
+        );
     }
 
     /**
@@ -119,7 +121,8 @@ public class SearchExerciseController implements Initializable{
     private void addNewButtonActionPerformed(){
         addNewSEButton.setOnAction(event ->
                 Main.gotoNewScene((Stage) addNewSEButton.getScene().getWindow(),
-                        Main.AE_FXML, AddExerciseController.WINDOW_TITLE)
+                        Main.AE_FXML, AddExerciseController.WINDOW_TITLE, 0,
+                        "")
         );
     }
 
@@ -153,10 +156,12 @@ public class SearchExerciseController implements Initializable{
      */
     private Button createButton(Exercise exercise){
         Button button = new Button(Integer.toString(exercise.getCod()));
+
         button.setOnAction(event -> {
                 Main.exercise_id = exercise.getCod();
                 Main.gotoNewScene((Stage) addNewSEButton.getScene().getWindow(),
-                        Main.AE_FXML, AddExerciseController.WINDOW_TITLE);
+                        Main.SS_FXML, SearchSolutionController.WINDOW_TITLE,
+                        exercise.getCod(),Main.EXERCISE);
         });
         return button;
     }

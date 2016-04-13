@@ -71,10 +71,9 @@ public class RegisterController implements Initializable{
 	 * returns to the login window when clicked.
 	 */
 	private void cancelButtonActionPerformed(){
-		regCancelButton.setOnAction(
-				event -> Main.gotoNewScene((Stage) regCancelButton.getScene()
-								.getWindow(),Main.L_FXML,
-						LoginController.WINDOW_TITLE)
+		regCancelButton.setOnAction(event ->
+                Main.gotoNewScene((Stage) regCancelButton.getScene().getWindow()
+                        ,Main.L_FXML, LoginController.WINDOW_TITLE,0,"")
 		);
 	}
 
@@ -84,7 +83,6 @@ public class RegisterController implements Initializable{
 	 */
 	private void confirmButtonActionPerformed(){
 		regConfirmButton.setOnAction(event -> {
-
 			String username = regUsernameTF.getText(),
 					password = regPasswordF.getText(),
 					email = emailTF.getText();
@@ -93,13 +91,11 @@ public class RegisterController implements Initializable{
 				warningRequired.setVisible(true);
 			}
             else if(oUser == null)
-                warningUsername.setVisible(false);
-
-			else {
+                warningUsername.setVisible(true);
+			else
                 Main.gotoNewScene((Stage) regConfirmButton.getScene()
-		                .getWindow(), Main.SUC_FXML, SearchUcController
-		                .WINDOW_TITLE );
-            }
+                        .getWindow(), Main.SUC_FXML, SearchUcController
+		                .WINDOW_TITLE,oUser.getCod(),Main.USER );
 		});
 	}
 }

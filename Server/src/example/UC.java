@@ -12,7 +12,7 @@ import java.io.Serializable;
  */
 public class UC implements Serializable{
     private String name, uni;
-    private static int cod = 0;
+    private int cod;
     private int exerciseCount = 0;
 
     /**
@@ -28,10 +28,10 @@ public class UC implements Serializable{
      * @param name	Name of the UC
      * @param uni	Name of the University
      */
-    public UC(String name, String uni){
+    public UC(String name, String uni, int cod){
         this.name = name;
         this.uni = uni;
-        this.cod++;
+        this.cod = cod;
     }
 
     /**
@@ -40,10 +40,10 @@ public class UC implements Serializable{
      *
      * @param name	Name of the UC
      */
-    public UC(String name){
+    public UC(String name, int cod){
         this.name = name;
         this.uni = NO_UNIVERSITY;
-        this.cod++;
+        this.cod = cod;
     }
 
     /**

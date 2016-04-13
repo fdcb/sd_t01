@@ -4,4 +4,6 @@ grant {
  permission java.io.FilePermission "users.dat", "read,write";
  permission java.io.FilePermission "Uc.dat", "read,write";
  permission java.io.FilePermission "Exercises.dat", "read,write";
+ permission java.io.FilePermission "Solutions.dat", "read,write";
+ permission java.util.PropertyPermission "0", "read";
 };

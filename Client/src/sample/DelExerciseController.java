@@ -52,7 +52,7 @@ public class DelExerciseController implements Initializable{
     private void noButtonActionPerformed(){
         delExerciseNoButton.setOnAction(event ->
                 Main.gotoNewScene((Stage) delExerciseNoButton.getScene().getWindow(),
-                        Main.L_FXML, LoginController.WINDOW_TITLE)
+                        Main.L_FXML, LoginController.WINDOW_TITLE,0,"")
         );
     }
 

@@ -80,7 +80,8 @@ public class LoginController implements Initializable{
 	private void setGuestUserLabelToClickable(){
 		guestUserL.setOnMouseClicked(event ->
 			Main.gotoNewScene((Stage) guestUserL.getScene().getWindow(),
-			Main.AE_FXML, AddExerciseController.WINDOW_TITLE)
+			Main.SUC_FXML, SearchUcController.WINDOW_TITLE, Solution
+							.GUEST_COD, Main.USER)
 		);
 	}
 
@@ -91,7 +92,7 @@ public class LoginController implements Initializable{
 	private void setRegisterLabelToClickable(){
 		registerL.setOnMouseClicked(event ->
 			Main.gotoNewScene((Stage) registerL.getScene().getWindow(),
-				Main.R_FXML, RegisterController.WINDOW_TITLE)
+				Main.R_FXML, RegisterController.WINDOW_TITLE, 0, "")
 		);
 	}
 
@@ -117,22 +118,13 @@ public class LoginController implements Initializable{
 
 			String username = usernameTF.getText(),
 					password = passwordF.getText();
-            URL url = Main.SUC_FXML;
             User user = ConnectServer.validateUser(username, password);
 			if(user == null)
 				warningErrorL.setVisible(true);
 			else{
-                Stage primaryStage = (Stage) confirmButton.getScene()
-                        .getWindow();
-                try {
-	                Main.user_id = user.getCod();
-                    Parent root = FXMLLoader.load(url);
-                    primaryStage.setScene(new Scene(root));
-                    primaryStage.setTitle(SearchUcController.WINDOW_TITLE);
-                    primaryStage.show();
-                }catch (IOException e) {
-                    System.out.println(e.getMessage());
-                }
+                Stage stage = (Stage) confirmButton.getScene().getWindow();
+				Main.gotoNewScene(stage,Main.SUC_FXML,SearchUcController
+                        .WINDOW_TITLE,user.getCod(),Main.USER);
 			}
 		});
 	}

@@ -75,4 +75,56 @@ public class ConnectServer{
         }
     }
 
+    static public Vector<Solution> getSolutionsFromExercise(){
+        try {
+            return Main.myServerObject.getSolutionsFromExercise(Main
+                    .exercise_id, Main.uc_id);
+        } catch(Exception e) {
+            System.out.println("CS: Exception occured: " + e);
+            System.exit(0);
+        }
+        return null;
+    }
+
+    static public void addSolution(String description){
+        try {
+            Main.myServerObject.addSolution(description,Main.user_id,Main
+                    .exercise_id,Main.uc_id);
+        } catch(Exception e) {
+            System.out.println("CS: Exception occured: " + e);
+            System.exit(0);
+        }
+    }
+
+    static public void changeSolutionState(String state){
+            try {
+            Main.myServerObject.changeSolutionState(Main.exercise_id, Main
+                    .uc_id, Main.solution_id, state);
+        } catch(Exception e) {
+            System.out.println("CS: Exception occured: " + e);
+            System.exit(0);
+        }
+    }
+
+    static public Solution getSolution(){
+        try {
+            return Main.myServerObject.getSolution(Main.exercise_id, Main
+                    .uc_id, Main.solution_id);
+        } catch(Exception e) {
+            System.out.println("CS: Exception occured: " + e);
+            System.exit(0);
+        }
+        return null;
+    }
+
+    static public void changeExerciseState(){
+        try {
+            Main.myServerObject.changeExerciseState(Main.exercise_id,
+                    Main.uc_id);
+        } catch(Exception e) {
+            System.out.println("CS: Exception occured: " + e);
+            System.exit(0);
+        }
+    }
+
 }

@@ -30,6 +30,11 @@ public class Main extends Application {
     public static int exercise_id;
     public static int solution_id;
 
+	final public static String USER = "User";
+    final public static String UC = "Uc";
+    final public static String EXERCISE = "Exercise";
+    final public static String SOLUTION = "Solution";
+
     @Override
     public void start(Stage primaryStage){
 		//gotoNewScene(primaryStage, LoginController.FILE_NAME,
@@ -53,7 +58,14 @@ public class Main extends Application {
 	 * @param windowTitle	Name of the desired window title.
 	 */
 	public static void gotoNewScene(Stage stage, URL filename, String
-			windowTitle){
+			windowTitle, int cod, String object){
+        switch (object){
+            case USER: user_id = cod; break;
+            case UC: uc_id = cod; break;
+            case EXERCISE: exercise_id = cod; break;
+            case SOLUTION: solution_id = cod; break;
+        }
+
 		try {
             Parent root = FXMLLoader.load(filename);
 			stage.setScene(new Scene(root));

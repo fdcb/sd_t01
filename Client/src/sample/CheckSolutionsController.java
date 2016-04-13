@@ -1,5 +1,8 @@
 package sample;
 
+import example.Exercise;
+import example.Solution;
+import example.UC;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
@@ -9,6 +12,7 @@ import javafx.stage.Stage;
 
 import java.net.URL;
 import java.util.ResourceBundle;
+import java.util.Vector;
 
 /**
  * Class with the methods to help with the CheckSolutions scene.
@@ -23,6 +27,7 @@ public class CheckSolutionsController implements Initializable{
     @FXML private Button wrongCSButton;
     @FXML private Button backCSButton;
 
+    Solution solution;
     /**
      * Title of the CheckSolutions SearchUC window.
      */
@@ -34,6 +39,18 @@ public class CheckSolutionsController implements Initializable{
 
     public void initialize(URL fxmlFileLocation, ResourceBundle resources){
         assertAll();
+        solution = ConnectServer.getSolution();
+        solutionCSLabel.setText(solution.getDescription());
+        Vector<Exercise> exerciseVector = ConnectServer.getExerciseFromUC();
+        int i = 0;
+        for(; i < exerciseVector.size(); i++)
+            if(exerciseVector.elementAt(i).getCod() == Main.exercise_id)
+                break;
+        if(exerciseVector.elementAt(i).getUserCod() != Main.user_id){
+            correctCSButton.setVisible(false);
+            wrongCSButton.setVisible(false);
+        }
+
         correctButtonActionPerformed();
         wrongButtonActionPerformed();
         backButtonActionPerformed();
@@ -59,11 +76,10 @@ public class CheckSolutionsController implements Initializable{
      * returns to the previous menu.
      */
     private void backButtonActionPerformed(){
-        backCSButton.setOnAction(event -> {
-            Stage stage = (Stage) backCSButton.getScene().getWindow();
-            stage.close();
-            System.exit(0);
-        });
+        backCSButton.setOnAction(event ->
+                Main.gotoNewScene((Stage)backCSButton.getScene().getWindow(),
+                        Main.SS_FXML, SearchSolutionController.WINDOW_TITLE, 0, "")
+        );
     }
 
     /**
@@ -72,10 +88,11 @@ public class CheckSolutionsController implements Initializable{
      */
     private void wrongButtonActionPerformed(){
         wrongCSButton.setOnAction(event -> {
-            Stage stage = (Stage) wrongCSButton.getScene().getWindow();
-            stage.close();
-            System.exit(0);
-        });
+            ConnectServer.changeSolutionState(Solution.STATE_INCORRECT);
+            Main.gotoNewScene((Stage)correctCSButton.getScene().getWindow(),
+                    Main.SS_FXML, SearchSolutionController.WINDOW_TITLE, 0 , "");
+        }
+        );
     }
 
     /**
@@ -84,9 +101,10 @@ public class CheckSolutionsController implements Initializable{
      */
     private void correctButtonActionPerformed(){
         correctCSButton.setOnAction(event -> {
-            Stage stage = (Stage) correctCSButton.getScene().getWindow();
-            stage.close();
-            System.exit(0);
-        });
+            ConnectServer.changeSolutionState(Solution.STATE_CORRECT);
+            Main.gotoNewScene((Stage)correctCSButton.getScene().getWindow(),
+                    Main.SS_FXML, SearchSolutionController.WINDOW_TITLE, 0 , "");
+        }
+        );
     }
 }
