@@ -23,10 +23,12 @@ public class Main extends Application {
     public static URL SE_FXML = null;
     public static URL SUC_FXML = null;
     public static URL AUC_FXML = null;
+    public static URL SS_FXML = null;
 
     public static int user_id;
     public static int uc_id;
     public static int exercise_id;
+    public static int solution_id;
 
     @Override
     public void start(Stage primaryStage){
@@ -110,5 +112,7 @@ public class Main extends Application {
 				.FILE_NAME);
         AUC_FXML = AddUCController.class.getResource(AddUCController
                 .FILE_NAME);
+        SS_FXML = SearchSolutionController.class.getResource
+                (SearchSolutionController.FILE_NAME);
 	}
 }

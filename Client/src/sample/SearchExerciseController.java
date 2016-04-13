@@ -119,7 +119,7 @@ public class SearchExerciseController implements Initializable{
     private void addNewButtonActionPerformed(){
         addNewSEButton.setOnAction(event ->
                 Main.gotoNewScene((Stage) addNewSEButton.getScene().getWindow(),
-                        Main., AddExerciseController.WINDOW_TITLE)
+                        Main.AE_FXML, AddExerciseController.WINDOW_TITLE)
         );
     }
 

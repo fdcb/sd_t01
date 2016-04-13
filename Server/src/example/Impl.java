@@ -95,8 +95,25 @@ public class Impl extends UnicastRemoteObject implements RMIInterface{
                 break;
         Exercise exercise = new Exercise(description,userId,ucCod,ucVector
                 .elementAt(i).getExerciseCount());
+        ucVector.elementAt(i).addExerciseCount();
         allExercise.add(exercise);
         ReadWriteFile.writeFileExercises(allExercise);
+        ReadWriteFile.writeFileUC(ucVector);
+    }
 
+    public Vector<Solution> getSolutionsFromExercise(int exerCod, int ucCod){
+        Vector<Solution> allSolutions = ReadWriteFile.readFileSolution(),
+                solutionsFromExercise = new Vector <>();
+        int i = 0;
+        for(; i < allSolutions.size(); i++)
+            if(allSolutions.elementAt(i).getExerciseCod() == exerCod &&
+                    allSolutions.elementAt(i).getUcCod() == ucCod)
+                solutionsFromExercise.add(allSolutions.elementAt(i));
+        return solutionsFromExercise;
+    }
+
+    public void addSolution(String description, int cod, int userCod,
+                            int exerciseCod, int ucCod){
+        
     }
 }

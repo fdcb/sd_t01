@@ -33,6 +33,7 @@ public class Solution {
      * */
     public static final int GUEST_COD = -1;
 
+    public static final String FILE_NAME = "Solutions.dat";
     /**
      * Creates a new Solution with the given description and code of the user
      * posting it, code of the UC it is related to, the code of the exercise
