@@ -1,5 +1,6 @@
 package sample;
 
+import example.Exercise;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
@@ -9,6 +10,7 @@ import javafx.stage.Stage;
 
 import java.net.URL;
 import java.util.ResourceBundle;
+import java.util.Vector;
 
 /**
  * Class with the methods to help with the AddSolution scene.
@@ -35,6 +37,13 @@ public class AddSolutionController implements Initializable{
     @Override
     public void initialize(URL location, ResourceBundle resources) {
         assertAll();
+        Vector<Exercise> exerciseVector = ConnectServer.getExerciseFromUC();
+        for(int i = 0; i < exerciseVector.size(); i++)
+            if(exerciseVector.elementAt(i).getCod() == Main.exercise_id){
+                exerDescASLabel.setText(exerciseVector.elementAt(i)
+                        .getDescription());
+                break;
+            }
         cancelButtonActionPerformed();
         submitButtonActionPerformed();
     }
@@ -60,7 +69,7 @@ public class AddSolutionController implements Initializable{
     private void cancelButtonActionPerformed(){
         cancelASButton.setOnAction(event ->
                 Main.gotoNewScene((Stage) cancelASButton.getScene().getWindow(),
-                        Main.L_FXML, LoginController.WINDOW_TITLE)
+                        Main.L_FXML, LoginController.WINDOW_TITLE,0,"")
         );
     }
 
@@ -70,8 +79,11 @@ public class AddSolutionController implements Initializable{
      */
     private void submitButtonActionPerformed(){
         submitASButton.setOnAction(event ->{
-            String exercise = submitASButton.getText();
-            System.out.println(exercise);
+            String exercise = solutionASTextArea.getText();
+            ConnectServer.addSolution(exercise);
+            Main.gotoNewScene((Stage)solutionASTextArea.getScene().getWindow
+                    (),Main.SS_FXML,SearchSolutionController.WINDOW_TITLE,0,
+                    "");
         });
     }
 

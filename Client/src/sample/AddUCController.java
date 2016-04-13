@@ -69,7 +69,7 @@ public class AddUCController implements Initializable{
         cancelAUButton.setOnAction(event -> {
             Stage stage = (Stage) cancelAUButton.getScene().getWindow();
             Main.gotoNewScene(stage, Main.SUC_FXML, SearchUcController
-                    .WINDOW_TITLE);
+                    .WINDOW_TITLE, 0, "");
         });
     }
 
@@ -85,7 +85,7 @@ public class AddUCController implements Initializable{
             if(newUC != null){
                 Stage stage = (Stage)confirmAUButton.getScene().getWindow();
                 Main.gotoNewScene(stage,Main.AE_FXML,AddExerciseController
-                        .WINDOW_TITLE);
+                        .WINDOW_TITLE, newUC.getCod() , Main.UC);
             }
             else
                 flagAULabel.setVisible(true);

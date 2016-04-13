@@ -1,5 +1,6 @@
 package sample;
 
+import example.Solution;
 import example.UC;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
@@ -42,6 +43,8 @@ public class SearchUcController implements Initializable{
     @Override
     public void initialize(URL fxmlFileLocation, ResourceBundle resources){
         assertAll();
+        if(Main.user_id == Solution.GUEST_COD)
+            addNewSUButton.setVisible(false);
         backButtonActionPerformed();
         addNewButtonActionPerformed();
         ucVector = ConnectServer.getAllUC();
@@ -82,7 +85,7 @@ public class SearchUcController implements Initializable{
     private void addNewButtonActionPerformed(){
        addNewSUButton.setOnAction(event ->
             Main.gotoNewScene((Stage) addNewSUButton.getScene().getWindow(),
-                    Main.AUC_FXML, AddUCController.WINDOW_TITLE)
+                    Main.AUC_FXML, AddUCController.WINDOW_TITLE, 0, "")
        );
     }
 
@@ -95,9 +98,16 @@ public class SearchUcController implements Initializable{
     private Button createButton(UC oUC){
         Button button = new Button(oUC.getName());
         button.setOnAction(event -> {
-            Main.uc_id = oUC.getCod();
+            int uc_id = -1;
+            String ucName = button.getText();
+            for(int i = 0; i < ucVector.size(); i++)
+                if(ucVector.elementAt(i).getName().equals(ucName)){
+                    uc_id = ucVector.elementAt(i).getCod();
+                    break;
+            }
             Main.gotoNewScene((Stage) addNewSUButton.getScene().getWindow(),
-                    Main.SE_FXML, SearchExerciseController.WINDOW_TITLE);
+                    Main.SE_FXML, SearchExerciseController.WINDOW_TITLE,
+                    uc_id, Main.UC);
         });
         return button;
     }

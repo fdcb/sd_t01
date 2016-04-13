@@ -1,11 +1,10 @@
 package sample;
 
+import example.Exercise;
 import example.Solution;
-import example.UC;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
-import javafx.scene.control.CheckBox;
 import javafx.scene.control.Label;
 import javafx.scene.layout.ColumnConstraints;
 import javafx.scene.layout.GridPane;
@@ -30,7 +29,10 @@ public class SearchSolutionController implements Initializable{
     @FXML private Button unvalidatedSSButton;
     @FXML private GridPane solutionSSGridPane;
     @FXML private Label exerciseSSLabel;
+    @FXML private Button closeSSButton;
 
+    private Vector<Solution> allSolutions, correctSolutions, wrongSolutions,
+            unvalidatedSolutions;
     /**
      * Title of the SearchUC window.
      */
@@ -43,9 +45,41 @@ public class SearchSolutionController implements Initializable{
     @Override
     public void initialize(URL fxmlFileLocation, ResourceBundle resources){
         assertAll();
+        allSolutions = ConnectServer.getSolutionsFromExercise();
+        Vector<Exercise> exerciseVector = ConnectServer.getExerciseFromUC();
+        int position = -1;
+        for(int i = 0; i < exerciseVector.size(); i++)
+            if(exerciseVector.elementAt(i).getCod() == Main.exercise_id){
+                exerciseSSLabel.setText(exerciseVector.elementAt(i)
+                        .getDescription());
+                position = i;
+                break;
+            }
+        addButtonsToGridLayout(allSolutions);
+        correctSolutions = new Vector <>();
+        wrongSolutions = new Vector <>();
+        unvalidatedSolutions = new Vector <>();
+        for(int i = 0; i < allSolutions.size(); i++){
+            if(allSolutions.elementAt(i).getState().equals(Solution
+                    .STATE_CORRECT))
+                correctSolutions.add(allSolutions.elementAt(i));
+            else if(allSolutions.elementAt(i).getState().equals(Solution
+                    .STATE_INCORRECT))
+                wrongSolutions.add(allSolutions.elementAt(i));
+            else
+                unvalidatedSolutions.add(allSolutions.elementAt(i));
+        }
+
+        System.out.print("hello?");
+        if(unvalidatedSolutions.size() != 0 || exerciseVector.elementAt(position).
+                getUserCod() != Main.user_id)
+            closeSSButton.setVisible(false);
+        closeButtonActionPerformed();
+        unvalidatedButtonActionPerformed();
+        wrongButtonActionPerformed();
+        correctButtonActionPerformed();
         backButtonActionPerformed();
         addNewButtonActionPerformed();
-        checkBoxActionPerformed();
     }
 
     /**
@@ -66,6 +100,8 @@ public class SearchSolutionController implements Initializable{
                 "was not injected: check your FXML file '" + FILE_NAME + "'.";
         assert addSSButton != null : "fx:id=\"addSSButton\" " +
                 "was not injected: check your FXML file '" + FILE_NAME + "'.";
+        assert closeSSButton != null : "fx:id=\"closeSSButton\" " +
+                "was not injected: check your FXML file '" + FILE_NAME + "'.";
     }
 
     /**
@@ -76,7 +112,17 @@ public class SearchSolutionController implements Initializable{
         cancelSSButton.setOnAction(event -> {
             Stage stage = (Stage) cancelSSButton.getScene().getWindow();
             Main.gotoNewScene(stage,Main.SE_FXML,SearchExerciseController
-                    .WINDOW_TITLE);
+                    .WINDOW_TITLE,0,"" );
+        });
+    }
+
+
+    private void closeButtonActionPerformed(){
+        closeSSButton.setOnAction(event -> {
+            ConnectServer.changeExerciseState();
+            Stage stage = (Stage) closeSSButton.getScene().getWindow();
+            Main.gotoNewScene(stage,Main.SE_FXML,SearchExerciseController
+                    .WINDOW_TITLE,0,"" );
         });
     }
 
@@ -87,8 +133,29 @@ public class SearchSolutionController implements Initializable{
     private void addNewButtonActionPerformed(){
         addSSButton.setOnAction(event ->
                 Main.gotoNewScene((Stage) addSSButton.getScene().getWindow(),
-                        Main.AS_FXML, AddSolutionController.WINDOW_TITLE)
+                        Main.AS_FXML, AddSolutionController.WINDOW_TITLE,0,"")
         );
+    }
+
+    private void correctButtonActionPerformed(){
+        correctSSButton.setOnAction(event -> {
+            solutionSSGridPane.getChildren().clear();
+            addButtonsToGridLayout(correctSolutions);
+        });
+    }
+
+    private void wrongButtonActionPerformed(){
+        wrongSSButton.setOnAction(event -> {
+            solutionSSGridPane.getChildren().clear();
+            addButtonsToGridLayout(wrongSolutions);
+        });
+    }
+
+    private void unvalidatedButtonActionPerformed(){
+        unvalidatedSSButton.setOnAction(event -> {
+            solutionSSGridPane.getChildren().clear();
+            addButtonsToGridLayout(unvalidatedSolutions);
+        });
     }
 
     /**
@@ -101,9 +168,9 @@ public class SearchSolutionController implements Initializable{
         Button button = new Button(Integer.toString(solution.getCod()));
 
         button.setOnAction(event ->{
-            Main.solution_id = solution.getCod();
             Main.gotoNewScene((Stage) addSSButton.getScene().getWindow(),
-                        Main.CS_FXML, CheckSolutionsController.WINDOW_TITLE);
+                    Main.CS_FXML, CheckSolutionsController.WINDOW_TITLE,
+                    solution.getCod(), Main.SOLUTION);
         });
         return button;
     }
@@ -112,10 +179,10 @@ public class SearchSolutionController implements Initializable{
      * Changes the {@link SearchUcController#ucNamesSUGridPane} in order to
      * have the buttons for all the UC's with exercises in the platform.
      */
-    private void addButtonsToGridLayout(Vector<UC> allUC){
-        if(allUC.size() == 0) return;
+    private void addButtonsToGridLayout(Vector<Solution> solutionVector){
+        if(solutionVector.size() == 0) return;
 
-        int gridSize = (int)Math.ceil(Math.sqrt(allUC.size()));
+        int gridSize = (int)Math.ceil(Math.sqrt(solutionVector.size()));
         int row = 0, col = 0;
         ColumnConstraints cc = new ColumnConstraints();
         cc.setMaxWidth(USE_PREF_SIZE);
@@ -123,18 +190,18 @@ public class SearchSolutionController implements Initializable{
         RowConstraints rc = new RowConstraints();
         rc.setMaxHeight(50);
 
-        ucNamesSUGridPane.setHgap(10);
-        ucNamesSUGridPane.setVgap(10);
-        ucNamesSUGridPane.getColumnConstraints().add(0,cc);
-        ucNamesSUGridPane.getRowConstraints().add(0,rc);
+        solutionSSGridPane.setHgap(10);
+        solutionSSGridPane.setVgap(10);
+        solutionSSGridPane.getColumnConstraints().add(0,cc);
+        solutionSSGridPane.getRowConstraints().add(0,rc);
 
-        System.out.print(gridSize);
-        for (int i = 0; i < allUC.size(); i++){
-            ucNamesSUGridPane.add(createButton(allUC.elementAt(i)),col,row);
+        for (int i = 0; i < solutionVector.size(); i++){
+            solutionSSGridPane.add(createButton(solutionVector.elementAt(i))
+                    ,col,row);
             if(row == 0)
-                ucNamesSUGridPane.getColumnConstraints().add(col + 1, cc);
+                solutionSSGridPane.getColumnConstraints().add(col + 1, cc);
             if(col + 1 > gridSize - 1){
-                ucNamesSUGridPane.getRowConstraints().add(row + 1, rc);
+                solutionSSGridPane.getRowConstraints().add(row + 1, rc);
                 row++;
                 col = 0;
             }
@@ -142,21 +209,4 @@ public class SearchSolutionController implements Initializable{
                 col++;
         }
     }
-
-    private void checkBoxActionPerformed(){
-        exerciseSUCheckBox.setOnAction(event -> {
-            if(exerciseSUCheckBox.isSelected()){
-                ucNamesSUGridPane.getChildren().clear();
-                Vector<UC> ucWithExercise = new Vector <>();
-                for(int i = 0; i < ucVector.size(); i++)
-                    if(ucVector.elementAt(i).getExerciseCount() != 0)
-                        ucWithExercise.add(ucVector.elementAt(i));
-                addButtonsToGridLayout(ucWithExercise);
-                return;
-            }
-            ucNamesSUGridPane.getChildren().clear();
-            addButtonsToGridLayout(ucVector);
-        });
-    }
-}
 }

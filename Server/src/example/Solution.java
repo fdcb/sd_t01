@@ -1,5 +1,7 @@
 package example;
 
+import java.io.Serializable;
+
 /**
  * Represents a Solution of a specific {@link Exercise}
  * A solution has an unique code within a {@link Exercise}, the id of the {@link User}
@@ -9,7 +11,7 @@ package example;
  * @author Filipa Brito
  * @author André Ramos
  */
-public class Solution {
+public class Solution implements Serializable{
     private String description, state;
     private int cod, userCod, exerciseCod, ucCod;
 
