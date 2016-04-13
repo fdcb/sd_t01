@@ -1,10 +1,12 @@
 package sample;
 
+import example.Solution;
 import example.UC;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.control.CheckBox;
+import javafx.scene.control.Label;
 import javafx.scene.layout.ColumnConstraints;
 import javafx.scene.layout.GridPane;
 import javafx.scene.layout.RowConstraints;
@@ -17,35 +19,32 @@ import java.util.Vector;
 import static javafx.scene.layout.Region.USE_PREF_SIZE;
 
 /**
- * Class with the methods to help with the SearchUC scene.
- *
- * @author Filipa Brito
- * @author André Ramos
+ * Created by Filipa on 13/04/2016.
  */
-public class SearchUcController implements Initializable{
-    @FXML private Button addNewSUButton;
-    @FXML private Button backSUButton;
-    @FXML private GridPane ucNamesSUGridPane;
-    @FXML private CheckBox exerciseSUCheckBox;
+public class SearchSolutionController implements Initializable{
 
-    Vector<UC> ucVector;
+    @FXML private Button addSSButton;
+    @FXML private Button cancelSSButton;
+    @FXML private Button correctSSButton;
+    @FXML private Button wrongSSButton;
+    @FXML private Button unvalidatedSSButton;
+    @FXML private GridPane solutionSSGridPane;
+    @FXML private Label exerciseSSLabel;
 
     /**
      * Title of the SearchUC window.
      */
-    public static final String WINDOW_TITLE = "List of UC's";
+    public static final String WINDOW_TITLE = "List of Solutions";
     /**
      * Name of the fxml file this class is associated with.
      */
-    public static final String FILE_NAME = "SearchUC.fxml" ;
+    public static final String FILE_NAME = "SearchSolutions.fxml" ;
 
     @Override
     public void initialize(URL fxmlFileLocation, ResourceBundle resources){
         assertAll();
         backButtonActionPerformed();
         addNewButtonActionPerformed();
-        ucVector = ConnectServer.getAllUC();
-        addButtonsToGridLayout(ucVector);
         checkBoxActionPerformed();
     }
 
@@ -53,14 +52,20 @@ public class SearchUcController implements Initializable{
      *  Injects all {@link FXML} variables.
      */
     private void assertAll(){
-        assert backSUButton != null : "fx:id=\"backSUButton\" was not " +
+        assert cancelSSButton != null : "fx:id=\"cancelSSButton\" was not " +
                 "injected: check your FXML file '" + FILE_NAME + "'.";
-        assert addNewSUButton != null : "fx:id=\"addNewSUButton\" was not " +
+        assert correctSSButton != null : "fx:id=\"correctSSButton\" was not " +
                 "injected: check your FXML file '" + FILE_NAME + "'.";
-        assert ucNamesSUGridPane != null : "fx:id=\"ucNamesSUGridPane\" was " +
+        assert wrongSSButton != null : "fx:id=\"wrongSSButton\" was " +
                 "not injected: check your FXML file '" + FILE_NAME + "'.";
-        assert exerciseSUCheckBox != null : "fx:id=\"exerciseSUCheckBox\" was" +
-                " not injected: check your FXML file '" + FILE_NAME + "'.";
+        assert unvalidatedSSButton != null : "fx:id=\"unvalidatedSSButton\" " +
+                "was not injected: check your FXML file '" + FILE_NAME + "'.";
+        assert solutionSSGridPane != null : "fx:id=\"solutionSSGridPane\" " +
+                "was not injected: check your FXML file '" + FILE_NAME + "'.";
+        assert exerciseSSLabel != null : "fx:id=\"exerciseSSLabel\" " +
+                "was not injected: check your FXML file '" + FILE_NAME + "'.";
+        assert addSSButton != null : "fx:id=\"addSSButton\" " +
+                "was not injected: check your FXML file '" + FILE_NAME + "'.";
     }
 
     /**
@@ -68,10 +73,10 @@ public class SearchUcController implements Initializable{
      * to the previous menu.
      */
     private void backButtonActionPerformed(){
-       backSUButton.setOnAction(event -> {
-            Stage stage = (Stage) backSUButton.getScene().getWindow();
-            stage.close();
-            System.exit(0);
+        cancelSSButton.setOnAction(event -> {
+            Stage stage = (Stage) cancelSSButton.getScene().getWindow();
+            Main.gotoNewScene(stage,Main.SE_FXML,SearchExerciseController
+                    .WINDOW_TITLE);
         });
     }
 
@@ -80,24 +85,25 @@ public class SearchUcController implements Initializable{
      * us to the addNewUC scene.
      */
     private void addNewButtonActionPerformed(){
-       addNewSUButton.setOnAction(event ->
-            Main.gotoNewScene((Stage) addNewSUButton.getScene().getWindow(),
-                    Main.AUC_FXML, AddUCController.WINDOW_TITLE)
-       );
+        addSSButton.setOnAction(event ->
+                Main.gotoNewScene((Stage) addSSButton.getScene().getWindow(),
+                        Main.AS_FXML, AddSolutionController.WINDOW_TITLE)
+        );
     }
 
     /**
      * Creates a button with the uc name.
      *
-     * @param oUC object of the UC
+     * @param solution object of the UC
      * @return a button with the name of the UC
      */
-    private Button createButton(UC oUC){
-        Button button = new Button(oUC.getName());
-        button.setOnAction(event -> {
-            Main.uc_id = oUC.getCod();
-            Main.gotoNewScene((Stage) addNewSUButton.getScene().getWindow(),
-                    Main.SE_FXML, SearchExerciseController.WINDOW_TITLE);
+    private Button createButton(Solution solution){
+        Button button = new Button(Integer.toString(solution.getCod()));
+
+        button.setOnAction(event ->{
+            Main.solution_id = solution.getCod();
+            Main.gotoNewScene((Stage) addSSButton.getScene().getWindow(),
+                        Main.CS_FXML, CheckSolutionsController.WINDOW_TITLE);
         });
         return button;
     }
@@ -152,4 +158,5 @@ public class SearchUcController implements Initializable{
             addButtonsToGridLayout(ucVector);
         });
     }
+}
 }

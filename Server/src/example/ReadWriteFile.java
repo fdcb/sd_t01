@@ -91,4 +91,32 @@ public class ReadWriteFile{
             System.out.println("Error writing in file.");
         }
     }
+
+    static public Vector<Solution> readFileSolution(){
+        Vector<Solution> allSolution = new Vector <>();
+        File file = new File(Solution.FILE_NAME);
+        try{
+            ObjectInputStream is = new ObjectInputStream(new FileInputStream
+                    (file));
+            allSolution = (Vector<Solution>)is.readObject();
+        }catch (IOException e){
+            System.out.println("Error reading file");
+        }
+        catch (ClassNotFoundException e){
+            System.exit(0);
+        }
+        return allSolution;
+    }
+
+    static public void writeFileSolution(Vector<Solution> allSolutions){
+        File file = new File(Solution.FILE_NAME);
+        try{
+            ObjectOutputStream os = new ObjectOutputStream(new FileOutputStream(
+                    (file)));
+            os.writeObject(allSolutions);
+            os.flush();
+        }catch (IOException e){
+            System.out.println("Error writing in file.");
+        }
+    }
 }

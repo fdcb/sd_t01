@@ -4,15 +4,28 @@
 <?import java.lang.*?>
 <?import javafx.scene.layout.*?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity"
+            minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0"
+            xmlns="http://javafx.com/javafx/8"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="sample.SearchSolutionController">
    <bottom>
       <Pane prefHeight="145.0" prefWidth="600.0" BorderPane.alignment="CENTER">
          <children>
-            <Button fx:id="addSSButton" layoutX="507.0" layoutY="73.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="79.0" text="Add New" />
-            <Button fx:id="cancelSSButton" cancelButton="true" defaultButton="true" layoutX="507.0" layoutY="110.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="79.0" text="Cancel" />
-            <ScrollPane layoutY="-2.0" prefHeight="149.0" prefViewportHeight="17.0" prefViewportWidth="27.990234375" prefWidth="494.0">
+            <Button fx:id="addSSButton" layoutX="507.0" layoutY="73.0"
+                    mnemonicParsing="false" prefHeight="25.0" prefWidth="79.0"
+                    text="Add New" />
+            <Button fx:id="cancelSSButton" cancelButton="true"
+                    defaultButton="true" layoutX="507.0" layoutY="110.0"
+                    mnemonicParsing="false" prefHeight="25.0" prefWidth="79.0"
+                    text="Cancel" />
+            <ScrollPane layoutY="-2.0" prefHeight="147.0"
+                        prefViewportHeight="17.0"
+                        prefViewportWidth="27.990234375" prefWidth="494.0">
                <content>
-                  <Label fx:id="exerciseSSLabel" layoutX="106.0" layoutY="73.0" prefHeight="145.0" prefWidth="491.0" text="Label" wrapText="true" />
+                  <Label fx:id="exerciseSSLabel" layoutX="106.0" layoutY="73.0"
+                         prefHeight="142.0" prefWidth="491.0" text="Label"
+                         wrapText="true" />
                </content>
             </ScrollPane>
          </children>
@@ -21,21 +34,27 @@
    <top>
       <HBox prefHeight="23.0" prefWidth="600.0" BorderPane.alignment="CENTER">
          <children>
-            <Button fx:id="correctSSButton" mnemonicParsing="false" prefHeight="25.0" prefWidth="210.0" text="Correct" />
-            <Button fx:id="wrongSSButton" mnemonicParsing="false" prefHeight="25.0" prefWidth="199.0" text="Wrong" />
-            <Button fx:id="unvalidatedSSButton" mnemonicParsing="false" prefHeight="25.0" prefWidth="191.0" text="Unvalidated" />
+            <Button fx:id="correctSSButton" mnemonicParsing="false"
+                    prefHeight="25.0" prefWidth="210.0" text="Correct" />
+            <Button fx:id="wrongSSButton" mnemonicParsing="false"
+                    prefHeight="25.0" prefWidth="199.0" text="Wrong" />
+            <Button fx:id="unvalidatedSSButton" mnemonicParsing="false"
+                    prefHeight="25.0" prefWidth="191.0" text="Unvalidated" />
          </children>
       </HBox>
    </top>
    <center>
       <ScrollPane prefViewportHeight="230.0" prefViewportWidth="600.0">
          <content>
-            <GridPane fx:id="solutionSSGridPane" prefHeight="228.0" prefWidth="598.0" BorderPane.alignment="CENTER">
+            <GridPane fx:id="solutionSSGridPane" prefHeight="228.0"
+                      prefWidth="598.0" BorderPane.alignment="CENTER">
               <columnConstraints>
-                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0"
+                                   prefWidth="100.0" />
               </columnConstraints>
               <rowConstraints>
-                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0"
+                                vgrow="SOMETIMES" />
               </rowConstraints>
             </GridPane>
          </content>
