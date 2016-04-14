@@ -86,8 +86,8 @@ public class Main extends Application {
 			    "\\java.policy");
 	    System.setSecurityManager(new RMISecurityManager());
 	    try {
-			InetAddress adress = java.net.Inet4Address.getByAddress(new byte[] {(byte) 192,(byte) 168, 43, 5});
-			serverName = adress.getHostName();
+			InetAddress address = java.net.Inet4Address.getByAddress(new byte[] {(byte) 192,(byte) 168, 43, 5});
+			serverName = address.getHostName();
 		 //   serverName = java.net.InetAddress.getLocalHost().getHostName();
 	    } catch(Exception e){
 		    e.printStackTrace();
