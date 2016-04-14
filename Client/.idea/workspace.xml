@@ -6,65 +6,7 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b36f898a-2bf1-48c4-a92d-65970ba53246" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/T01SD.iml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Client/java.policy" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Client/sample/AddExercise.fxml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Client/sample/AddExerciseController.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Client/sample/AddSolution.fxml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Client/sample/AddSolutionController.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Client/sample/AddUC.fxml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Client/sample/AddUCController.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Client/sample/CheckSolutions.fxml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Client/sample/CheckSolutionsController.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Client/sample/ConnectServer.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Client/sample/DelExerciseController.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Client/sample/DeleteExercise.fxml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Client/sample/Login.fxml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Client/sample/LoginController.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Client/sample/Main.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Client/sample/Register.fxml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Client/sample/RegisterController.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Client/sample/SearchExercise.fxml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Client/sample/SearchExerciseController.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Client/sample/SearchSolutions.fxml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Client/sample/SearchUC.fxml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Client/sample/SearchUcController.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../Server/Uc.dat" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Server/Exercises.dat" afterPath="$PROJECT_DIR$/../Server/Exercises.dat" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Server/out/artifacts/sd_t01_server_jar/sd_t01_server.jar" afterPath="$PROJECT_DIR$/../Server/out/artifacts/sd_t01_server_jar/sd_t01_server.jar" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Server/out/production/sd_t01_server/example/Impl.class" afterPath="$PROJECT_DIR$/../Server/out/production/sd_t01_server/example/Impl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Server/out/production/sd_t01_server/example/RMIInterface.class" afterPath="$PROJECT_DIR$/../Server/out/production/sd_t01_server/example/RMIInterface.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Server/out/production/sd_t01_server/example/ReadWriteFile.class" afterPath="$PROJECT_DIR$/../Server/out/production/sd_t01_server/example/ReadWriteFile.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Server/out/production/sd_t01_server/example/Solution.class" afterPath="$PROJECT_DIR$/../Server/out/production/sd_t01_server/example/Solution.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Server/out/production/sd_t01_server/example/UC.class" afterPath="$PROJECT_DIR$/../Server/out/production/sd_t01_server/example/UC.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/copyright/profiles_settings.xml" afterPath="$PROJECT_DIR$/.idea/copyright/profiles_settings.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Client.iml" afterPath="$PROJECT_DIR$/Client.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/java.policy" afterPath="$PROJECT_DIR$/src/java.policy" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/sample/AddExerciseController.java" afterPath="$PROJECT_DIR$/src/sample/AddExerciseController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/sample/AddSolutionController.java" afterPath="$PROJECT_DIR$/src/sample/AddSolutionController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/sample/AddUCController.java" afterPath="$PROJECT_DIR$/src/sample/AddUCController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/sample/CheckSolutionsController.java" afterPath="$PROJECT_DIR$/src/sample/CheckSolutionsController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/sample/ConnectServer.java" afterPath="$PROJECT_DIR$/src/sample/ConnectServer.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/sample/DelExerciseController.java" afterPath="$PROJECT_DIR$/src/sample/DelExerciseController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/sample/LoginController.java" afterPath="$PROJECT_DIR$/src/sample/LoginController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/sample/Main.java" afterPath="$PROJECT_DIR$/src/sample/Main.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/sample/RegisterController.java" afterPath="$PROJECT_DIR$/src/sample/RegisterController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/sample/SearchExerciseController.java" afterPath="$PROJECT_DIR$/src/sample/SearchExerciseController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/sample/SearchSolutionController.java" afterPath="$PROJECT_DIR$/src/sample/SearchSolutionController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/sample/SearchSolutions.fxml" afterPath="$PROJECT_DIR$/src/sample/SearchSolutions.fxml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/sample/SearchUcController.java" afterPath="$PROJECT_DIR$/src/sample/SearchUcController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Server/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../Server/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Server/out/production/sd_t01_server/java.policy" afterPath="$PROJECT_DIR$/../Server/out/production/sd_t01_server/java.policy" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Server/src/example/Impl.java" afterPath="$PROJECT_DIR$/../Server/src/example/Impl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Server/src/example/RMIInterface.java" afterPath="$PROJECT_DIR$/../Server/src/example/RMIInterface.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Server/src/example/Solution.java" afterPath="$PROJECT_DIR$/../Server/src/example/Solution.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Server/src/example/UC.java" afterPath="$PROJECT_DIR$/../Server/src/example/UC.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Server/src/java.policy" afterPath="$PROJECT_DIR$/../Server/src/java.policy" />
-    </list>
+    <list default="true" id="b36f898a-2bf1-48c4-a92d-65970ba53246" name="Default" comment="" />
     <ignored path="Client.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path="$PROJECT_DIR$/out/" />
@@ -113,8 +55,8 @@
       <file leaf-file-name="SearchExerciseController.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/sample/SearchExerciseController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="169">
-              <caret line="104" column="0" selection-start-line="104" selection-start-column="0" selection-end-line="104" selection-end-column="0" />
+            <state relative-caret-position="288">
+              <caret line="111" column="27" selection-start-line="111" selection-start-column="27" selection-end-line="111" selection-end-column="27" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -1135,8 +1077,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/sample/SearchExerciseController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="169">
-          <caret line="104" column="0" selection-start-line="104" selection-start-column="0" selection-end-line="104" selection-end-column="0" />
+        <state relative-caret-position="288">
+          <caret line="111" column="27" selection-start-line="111" selection-start-column="27" selection-end-line="111" selection-end-column="27" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
