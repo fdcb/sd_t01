@@ -11,7 +11,8 @@ import java.io.Serializable;
  */
 public class User implements Serializable{
     private String username, email,password;
-    private static int cod;
+    private int cod;
+    private static int totalUsers = 0;
 
     static final public String USER_FILENAME = "users.dat";
 
@@ -28,7 +29,8 @@ public class User implements Serializable{
         this.username = username;
         this.password = password;
         this.email = email;
-        this.cod++;
+        this.totalUsers++;
+        this.cod = totalUsers;
     }
 
     /**
@@ -43,7 +45,8 @@ public class User implements Serializable{
         this.password = password;
         this.username = username;
         this.email = "";
-        this.cod++;
+        this.totalUsers++;
+        this.cod = totalUsers;
     }
 
     /**

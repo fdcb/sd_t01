@@ -1,11 +1,8 @@
 package example;
 
-import java.io.*;
-import java.nio.file.Files;
 import java.rmi.Naming;
 import java.rmi.RemoteException;
 import java.rmi.server.UnicastRemoteObject;
-import java.util.Random;
 import java.util.Vector;
 
 /**
@@ -42,7 +39,7 @@ public class Impl extends UnicastRemoteObject implements RMIInterface{
         User tempUser;
         if(allUsers != null)
             for(int i = 0; i < allUsers.size(); i++)
-                if(allUsers.elementAt(i).getUsername().equals(name) || allUsers
+                if(allUsers.elementAt(i).getUsername().equals(name) && allUsers
                         .elementAt(i).getEmail().equals(email))
                     return null;
 

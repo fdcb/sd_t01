@@ -55,6 +55,8 @@ public class SearchSolutionController implements Initializable{
                 position = i;
                 break;
             }
+        if(exerciseVector.elementAt(position).getState().equals(Exercise.STATE_CLOSED))
+            addSSButton.setVisible(false);
         addButtonsToGridLayout(allSolutions);
         correctSolutions = new Vector <>();
         wrongSolutions = new Vector <>();
