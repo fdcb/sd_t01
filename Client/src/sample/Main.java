@@ -7,6 +7,8 @@ import javafx.scene.Scene;
 import javafx.stage.Stage;
 
 import java.io.IOException;
+import java.net.Inet4Address;
+import java.net.InetAddress;
 import java.net.URL;
 import java.rmi.Naming;
 import java.rmi.RMISecurityManager;
@@ -84,7 +86,9 @@ public class Main extends Application {
 			    "\\java.policy");
 	    System.setSecurityManager(new RMISecurityManager());
 	    try {
-		    serverName = java.net.InetAddress.getLocalHost().getHostName();
+			InetAddress adress = java.net.Inet4Address.getByAddress(new byte[] {(byte) 192,(byte) 168, 43, 5});
+			serverName = adress.getHostName();
+		 //   serverName = java.net.InetAddress.getLocalHost().getHostName();
 	    } catch(Exception e){
 		    e.printStackTrace();
 	    }

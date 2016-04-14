@@ -31,6 +31,7 @@ public class Server{
 
         System.setSecurityManager(new RMISecurityManager());
         try { //Iniciar a execução do registry no porto desejado
+         //   java.rmi.registry.LocateRegistry.createRegistry()
             java.rmi.registry.LocateRegistry.createRegistry(1099);
             System.out.println("RMI registry ready.");
         } catch (Exception e) {
