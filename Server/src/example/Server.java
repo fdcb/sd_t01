@@ -20,6 +20,7 @@ public class Server{
             BufferedReader in = new BufferedReader(
                     new InputStreamReader(clientSocket.getInputStream()));
             clientSocket = serverSocket.accept();
+          //  clientSocket.
         } catch (IOException e) {
             e.printStackTrace();
         }
