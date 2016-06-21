@@ -88,7 +88,7 @@ public class Main extends Application {
 	    try {
 			InetAddress address = java.net.Inet4Address.getByAddress(new byte[] {(byte) 192,(byte) 168, 43, 5});
 			serverName = address.getHostName();
-		 //   serverName = java.net.InetAddress.getLocalHost().getHostName();
+            //   serverName = java.net.InetAddress.getLocalHost().getHostName();
 	    } catch(Exception e){
 		    e.printStackTrace();
 	    }
